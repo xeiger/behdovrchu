@@ -24,7 +24,7 @@ if ( navigator.appVersion.indexOf("Mac")!=-1 )
   jQuery('html').addClass('osx');
 
 var ready = function() {
-
+  alert("test");
   /* -------------------------------------------------------- 
      External Links
      -------------------------------------------------------- */  
@@ -215,13 +215,13 @@ var ready = function() {
         $('body').removeClass('loading');
       }, 
     });
-
+/*
     $('.slider2').flexslider({
       animation: "slide",
       slideshow: false,
       animationLoop: false    
     });
-  /*});*/
+  });*/
   
 };
 
