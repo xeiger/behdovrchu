@@ -24,7 +24,7 @@ if ( navigator.appVersion.indexOf("Mac")!=-1 )
   jQuery('html').addClass('osx');
 
 var ready = function() {
-
+alert("test");
   /* -------------------------------------------------------- 
      External Links
      -------------------------------------------------------- */  
