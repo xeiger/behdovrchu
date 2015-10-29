@@ -1,0 +1,102 @@
+<%= render :partial => 'partials/titlebar', locals: {title: 'Propozice'} %>
+
+<% 
+  data = []
+  data << {key: 'Datum konání', value: 'sobota 5.12.2015'}
+  data << {key: 'Start závodu', value: '12:00, hromadný'}
+  data << {key: 'Trať závodu', value: 'beží se od Hotelu Ráztoka po Knížecí cestě k horní stanici lanové dráhy. Délka trati je 5700m, převýšení je 400m.'}
+  data << {key: 'Prezentace', value: 'probíhá v den závodu v bufetu Hotelu Ráztoka a to od 9:00 do 11:00.'}
+  data << {key: 'Startovné', value: 'při přihlášení a zaplacení předem 100 Kč (paltba musí přijít na účet do 30.11.2015 včetně), po tomto termínu a v den závodu 150 Kč.'}
+  data << {key: 'Přihlášky', value: 'přihlásit se je možné skrze webový formulář. Po odeslání Vám přijde email s informacemi k zaplacení (v případě hromadného přihlášení nás prosím kontaktujte na našem emailu).'}
+
+  data_small = []
+  data_small << {key: 'Datum konání', value: 'sobota 5.12.2015'}
+  data_small << {key: 'Start závodu', value: '10:00, hromadný'}
+  data_small << {key: 'Trať závodu', value: 'beží se od Hotelu Ráztoka ke spodní stanici lanové dráhy. Délka trati je 600m.'}
+  data_small << {key: 'Prezentace', value: 'probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'}
+  data_small << {key: 'Startovné', value: 'dětský závod je bez startovného.'}
+  data_small << {key: 'Přihlášky', value: 'přihlašuje se na místě v den závodu při prezentaci. V případě, že se chystáte přijet s větší skupinou dětí, dejte nám, prosím, vědět na náš email.'}
+%>
+
+<!-- Content -->
+<div id="content">
+  <div class="container">
+
+    <!-- Hlavni zavod -->
+    <div class="row">
+      <div class="span12">
+        <h2>Hlavní závod</h2>
+
+        <div class="row">
+          <div class="span12">
+
+            <% data.each do |d| %>
+              <div class="row">
+                <div class="span3">
+                  <div class="leftblockquote"><%= d[:key] %></div>
+                </div>
+                <div class="span9">
+                  <blockquote><%= d[:value] %></blockquote>
+                </div>
+              </div>
+            <% end %>
+
+            <h3>Doplňující informace</h3>
+            <ul class="list-a">
+              <li>Každý závodník obdrží při prezentaci tradiční tričko</li>
+              <li>Pro závodníky bude zajištěn vývoz oblečení na Pustevny</li>
+              <li>Pro závodníky bude zajištěn svoz lanovkou do Ráztoky</li>
+              <li>V cíli bude pro závodníky zajištěn čaj</li>
+              <li>Vyhlášení závodu bude probíhat v bufetu Hotelu Ráztoka přibližně ve 14:00</li>
+              <li>Parkování aut je možné na veřejných parkovištích v Ráztoce</li>
+              <li><b>Každý závodník startuje na vlastní nebezpečí</b></li>
+              <li>Závod se koná za každého počasí</li>
+            </ul>   
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+      <!-- HLavni zavod End -->
+
+    <!-- Maly zavod -->
+    <div class="row">
+      <div class="span12">
+        <h2>Závod dětí</h2>
+
+        <div class="row">
+          <div class="span12">
+
+            <% data_small.each do |d| %>
+              <div class="row">
+                <div class="span3">
+                  <div class="leftblockquote"><%= d[:key] %></div>
+                </div>
+                <div class="span9">
+                  <blockquote><%= d[:value] %></blockquote>
+                </div>
+              </div>
+            <% end %>
+
+            <h3>Doplňující informace</h3>
+            <ul class="list-a">
+              <li>Vyhlášení závodu bude probíhat v bufetu Hotelu Ráztoka ihned po závodě (po přesunutí závodníků zpět do Ráztoky)</li>
+              <li><b>Každý závodník startuje na vlastní nebezpečí</b></li>
+              <li>Závod se koná za každého počasí</li>
+            </ul>   
+
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Maly zavod End -->
+
+    <div class="space50"></div> 
+
+  </div>
+</div>
+<!-- Content End -->

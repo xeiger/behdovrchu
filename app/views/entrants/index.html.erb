@@ -1,0 +1,51 @@
+<%= render :partial => 'partials/titlebar', locals: {title: 'Seznam přihlášených'} %>
+
+<!-- Content -->
+<div id="content">
+  <div class="container">
+
+    <div class="row">
+      <div class="span12">
+
+
+        <h2>Seznam registrovaných zavodníků</h2>
+
+        <div class="space20"></div> 
+
+        <%= render(:partial => "partials/flash", :locals => { :flash => flash }) %>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="span1">#</th>
+              <th class="span3">Jméno</th>
+              <th class="span3">Příjmení</th>
+              <th class="span3">Oddíl</th>
+              <th class="span1">Rok</th>
+              <th class="span1">Zaplaceno</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <% @entrants.each_with_index do |entrant, index| %>
+              <tr class="<%= index%2 == 0 ? 'even' : 'odd' %>">
+                <td class="center"><%= index + 1 %></td>
+                <td><%= entrant.first_name %></td>
+                <td><%= entrant.surname %></td>
+                <td><%= entrant.club %></td>
+                <td class="center"><%= entrant.birthday.strftime('%Y') %></td>
+                <td class="center"><%= entrant.paid ? 'ANO' : 'NE' %></td>
+              </tr>  
+            <% end %>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="space50"></div> 
+
+  </div>
+</div>
+<!-- Content End -->

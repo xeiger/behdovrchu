@@ -1,0 +1,72 @@
+<%= render :partial => 'partials/titlebar', locals: {title: 'Přihláška'} %>
+
+<!-- Content -->
+<div id="content">
+  <div class="container">
+
+    <!-- Hlavni zavod -->
+    <div class="row">
+      <div class="span12">
+        <h2>Přihláška</h2>
+
+        <div class="space20"></div> 
+
+        <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
+
+        <%= form_for @entrant, :html=>{:class=>'form-comment'} do |f| %>
+
+          <div class="row">
+            <div class="span6">
+              Jméno*<br>
+              <%= f.text_field :first_name %>
+            </div>
+            <div class="span6">
+              Příjmení*<br>
+              <%= f.text_field :surname %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="span6">
+              Email*<br>
+              <%= f.text_field :email %>
+            </div>
+            <div class="span6">
+              Datum narození*<br>
+              <%= f.text_field :birthday %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="span6">
+              Oddíl<br>
+              <%= f.text_field :club %>
+            </div>
+            <div class="span6">
+              Adresa<br>
+              <%= f.text_field :address %>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="span4">
+              Pole označená hvězdičkou (*) jsou povinná!
+            </div>
+            <div class="span8">
+              <%= button_tag( :class => "btn f-right") do %>
+                <i class="icon-ok"></i> Přihlásit
+              <% end %>
+            </div>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div>
+
+    <div class="space50"></div> 
+
+  </div>
+</div>
+<!-- Content End -->

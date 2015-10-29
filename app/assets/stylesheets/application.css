@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+a.more {
+  color: #fda056;
+}
+
+a:hover.more {
+  color: #83adff;
+}
