@@ -1,9 +1,9 @@
-<div class="span9">
+<div class="col-md-9">
   <div class="row space60"></div>
     <nav id="nav" role="navigation">
       <a href="#nav" title="Show navigation">Show navigation</a>
       <a href="#" title="Hide navigation">Hide navigation</a>
-      <ul class="clearfix">
+      <ul class="clearfix" style="padding-left: 0px !important;">
         <li class="<%= 'active' if params[:action].eql?('home') %>"><%= link_to 'Úvod', home_page_url %></li>
         <li class="<%= 'active' if params[:action].eql?('programme') %>"><%= link_to 'Propozice', programme_page_path %></li>
         <li class="<%= 'active' if ['new', 'create'].include?(params[:action]) %>"><%= link_to 'Přihláška', new_entrant_path %></li>

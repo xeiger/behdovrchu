@@ -24,18 +24,18 @@
 
     <!-- Hlavni zavod -->
     <div class="row">
-      <div class="span12">
+      <div class="col-md-12">
         <h2>Hlavní závod</h2>
 
         <div class="row">
-          <div class="span12">
+          <div class="col-md-12">
 
             <% data.each do |d| %>
               <div class="row">
-                <div class="span3">
+                <div class="col-md-3">
                   <div class="leftblockquote"><%= d[:key] %></div>
                 </div>
-                <div class="span9">
+                <div class="col-md-9">
                   <blockquote><%= d[:value] %></blockquote>
                 </div>
               </div>
@@ -62,18 +62,18 @@
 
     <!-- Maly zavod -->
     <div class="row">
-      <div class="span12">
+      <div class="col-md-12">
         <h2>Závod dětí</h2>
 
         <div class="row">
-          <div class="span12">
+          <div class="col-md-12">
 
             <% data_small.each do |d| %>
               <div class="row">
-                <div class="span3">
+                <div class="col-md-3">
                   <div class="leftblockquote"><%= d[:key] %></div>
                 </div>
-                <div class="span9">
+                <div class="col-md-9">
                   <blockquote><%= d[:value] %></blockquote>
                 </div>
               </div>

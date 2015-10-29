@@ -6,54 +6,66 @@
 
     <!-- Hlavni zavod -->
     <div class="row">
-      <div class="span12">
+      <div class="col-md-12">
         <h2>Přihláška</h2>
 
         <div class="space20"></div> 
 
         <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
 
-        <%= form_for @entrant, :html=>{:class=>'form-comment'} do |f| %>
+        <%= form_for @entrant, :html=>{:class=>'form form-comment'} do |f| %>
 
           <div class="row">
-            <div class="span6">
-              Jméno*<br>
-              <%= f.text_field :first_name %>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Jméno *</label>
+                <%= f.text_field :first_name, class: "form-control" %>
+              </div>
             </div>
-            <div class="span6">
-              Příjmení*<br>
-              <%= f.text_field :surname %>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Příjmení *</label>
+                <%= f.text_field :surname, class: "form-control" %>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="span6">
-              Email*<br>
-              <%= f.text_field :email %>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Email *</label>
+                <%= f.text_field :email, class: "form-control" %>
+              </div>
             </div>
-            <div class="span6">
-              Datum narození*<br>
-              <%= f.text_field :birthday %>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Datum narození *</label>
+                <%= f.text_field :birthday, class: "form-control" %>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="span6">
-              Oddíl<br>
-              <%= f.text_field :club %>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Oddíl</label>
+                <%= f.text_field :club, class: "form-control" %>
+              </div>
             </div>
-            <div class="span6">
-              Adresa<br>
-              <%= f.text_field :address %>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Adresa</label>
+                <%= f.text_field :address, class: "form-control" %>
+              </div>
             </div>
           </div>
 
 
           <div class="row">
-            <div class="span4">
+            <div class="col-md-4">
               Pole označená hvězdičkou (*) jsou povinná!
             </div>
-            <div class="span8">
+            <div class="col-md-8">
               <%= button_tag( :class => "btn f-right") do %>
                 <i class="icon-ok"></i> Přihlásit
               <% end %>

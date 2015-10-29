@@ -2,7 +2,7 @@
 /*	Twitter Bootstrap */
 /*	Responsive media queries */
 /*	freshdesignweb.com */
-/* --------------------------------------------------------	*/
+/* --------------------------------------------------------	
 
 @import url("bootstrap.min.css");
 @import url("bootstrap-responsive.min.css");
@@ -86,8 +86,10 @@ p {
 
 blockquote {        
   color:#83adff;
-  margin:15px 0px;
-  border-left:5px solid #fda056; 
+  margin:10px 0px;
+  padding:5px 20px;
+  border-left:4px solid #fda056; 
+  font-size:15px;
 }
 
 .leftblockquote {
@@ -845,7 +847,7 @@ header {
        
 .alert {
   margin-bottom:9px;
-  padding:10px 40px 10px 20px;
+  padding:10px 20px 10px 20px;
   color:#789ab9;
   background:#e4f2ff;
   border-radius:0px;
@@ -1048,7 +1050,7 @@ table a:hover{
   }   
   
   .form-comment input, .form-comment textarea {
-    width:95.7%;
+    width:100%;
     background:#f9f9f9;
     margin-top:10px;
     padding:8px 12px !important;
