@@ -527,11 +527,11 @@ header {
 .ic-1 {     
   width:45px;  
   height:30px;
-  font-size:34px;
+  font-size:30px;
   float:left;
 }
 
-.ic-1 i {
+.ic-1 span {
   color:#fb8865;
 }
    
@@ -1398,7 +1398,7 @@ table a:hover{
   text-decoration:none;       
 }
 
-#footer i {
+#footer span {
   margin-right:12px;
 }
 
