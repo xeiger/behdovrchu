@@ -28,10 +28,6 @@ var ready = function() {
     }, 
   });
 
-$('#test').click(function() {
-  alert('test');
-});
-
 };
 
 // When DOM is fully loaded
