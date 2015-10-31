@@ -14,10 +14,26 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
-//= jquery.flexslider
-//= pokus
 //= require_tree .
 
 // If JavaScript is enabled remove 'no-js' class and give 'js' class
 jQuery('html').removeClass('no-js').addClass('js');
 
+var ready = function() {
+
+  $('.slider1').flexslider({ 
+    animation: "slide",
+    start: function(slider){
+      $('body').removeClass('loading');
+    }, 
+  });
+
+$('#test').click(function() {
+  alert('test');
+});
+
+};
+
+// When DOM is fully loaded
+$(document).ready(ready);
+$(document).on('page:load', ready);
