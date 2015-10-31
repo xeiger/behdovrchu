@@ -2,7 +2,7 @@ class Entrant < ActiveRecord::Base
 
   validates :first_name, :surname, :birthday, :email, :variable_symbol, :presence => true
 
-  validates :email, :format => {:with => /\A^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$\z/}
+  validates :email, :format => {:with => /\A^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$\z/}
   validates :variable_symbol, uniqueness: true
 
   before_validation :generate_vs, on: :create
