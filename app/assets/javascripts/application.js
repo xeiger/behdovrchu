@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= jquery.flexslider
 //= require_tree .
 
 // If JavaScript is enabled remove 'no-js' class and give 'js' class
