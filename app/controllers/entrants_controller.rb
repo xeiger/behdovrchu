@@ -24,7 +24,7 @@ class EntrantsController < ApplicationController
   private 
 
   def entrant_params
-    params.require(:entrant).permit(:first_name, :surname, :email, :birthday, :club, :address)
+    params.require(:entrant).permit(:first_name, :surname, :email, :year, :club, :address)
   end
 
 end

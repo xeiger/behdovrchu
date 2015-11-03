@@ -33,7 +33,7 @@
                 <td><%= entrant.first_name %></td>
                 <td><%= entrant.surname %></td>
                 <td><%= entrant.club %></td>
-                <td class="center"><%= entrant.birthday.strftime('%Y') %></td>
+                <td class="center"><%= entrant.year %></td>
                 <td class="center"><%= entrant.paid ? 'ANO' : 'NE' %></td>
               </tr>  
             <% end %>
@@ -41,6 +41,11 @@
           </tbody>
         </table>
 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        * Číslo na začátku řádku <b>NENÍ</b> startovní číslo
       </div>
     </div>
 
