@@ -20,6 +20,7 @@ class Entrant < ActiveRecord::Base
   private
 
   def generate_vs
+    return unless self.variable_symbol.blank?
     begin
       vs = Time.now.strftime("%m%d%H") + rand(10000).to_s.rjust(4, '0')
     end while Entrant.exists?(variable_symbol: vs)
@@ -27,6 +28,7 @@ class Entrant < ActiveRecord::Base
   end
 
   def send_email
+    return if self.variable_symbol[0..3].eql?('0000')
     EntrantMailer.registration(self).deliver
   end
 
