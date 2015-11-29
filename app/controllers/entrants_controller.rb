@@ -18,7 +18,7 @@ class EntrantsController < ApplicationController
   end
 
   def index
-    @entrants = Entrant.all.order('surname ASC, first_name ASC')
+    @entrants = Entrant.where(archived: false).order('surname ASC, first_name ASC')
   end
 
   private 
