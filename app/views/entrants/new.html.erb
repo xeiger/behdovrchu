@@ -10,13 +10,16 @@
         <h2>Přihláška</h2>
         <ul class="list-a">
           <li>
-            Na dětský závod se přihlašuje v den závodu při prezentaci. Dětský závod je bez startovného.
+            Zastavili jsme on-line přihlašování. Pokud jste se nestihli přihlásit, máte možnost ještě v den závodu při prezentaci.
           </li>
+<% if false %>
           <li>
             V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na emailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
           </li>
+<% end %>          
         </ul>
 
+<% if false %>
         <div class="space20"></div> 
 
         <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
@@ -81,10 +84,10 @@
           </div>
 
         <% end %>
+<% end %>
 
       </div>
     </div>
-
     <div class="space50"></div> 
 
   </div>
