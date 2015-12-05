@@ -911,7 +911,7 @@ th {
   padding:15px 20px !important;
   text-align:center!important;
   font-weight:bold !important;
-  background-color: lightgrey;
+  background: #d3d3d3;
 }
 
 tr.result > th {
