@@ -919,6 +919,7 @@ tr.result > th {
   padding:5px 0px !important;
   text-align:center!important;
   font-weight:bold !important;
+  background: #d3d3d3;
 }
 
 td {
