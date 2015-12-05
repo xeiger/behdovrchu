@@ -3,7 +3,7 @@
   <div class="container">
     <div class="f-center">
       <h2>Běh do vrchu Ráztoka - Pustevny</h2>
-      <div class="head-info">V sobotu 5.12.2015 se uskuteční 46. ročník tradičního běžeckého závodu "Běh do vrchu Ráztoka – Pustevny".</div>
+      <div class="head-info">V sobotu 5.12.2015 se uskutečnil 46. ročník tradičního běžeckého závodu "Běh do vrchu Ráztoka – Pustevny".</div>
       <div class="head-info">Pořádá tým BeskydSki ve spolupráci s Lanovou dráhou Ráztoka - Pustevny.</div>
     </div>
     <div class="f-hr"></div>
@@ -11,6 +11,23 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row">
+
+          <div class="col-md-4">
+            <div class="ic-1"><span class="glyphicon glyphicon-paperclip" id="test"></span></div>
+            <div class="title-1"><h4>Výsledky závodu</h4></div>
+            <div class="text-1">         
+              Přinášíme kompletní výsledky závodu včetně závodu dětí. <%= link_to 'více...', results_page_path, class: 'more' %>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="ic-1"><span class="glyphicon glyphicon-paperclip"></span></div>
+            <div class="title-1"><h4>Fotky ze závodu</h4></div>
+            <div class="text-1">
+              První fotky jsou k dispozici na webu pana Rašky. Tímto mu ještě jednou děkujeme za pomoc při organizaci závodu. <%= link_to 'více...', gallery_page_path, class: 'more' %>
+            </div>
+          </div>    
+
           <!-- Service Container --> 
           <div class="col-md-4">
             <!-- Service Icon --> 
@@ -23,20 +40,7 @@
             </div>
           </div>
           <!-- Service Container End --> 
-          <div class="col-md-4">
-            <div class="ic-1"><span class="glyphicon glyphicon-paperclip" id="test"></span></div>
-            <div class="title-1"><h4>Závod dětí</h4></div>
-            <div class="text-1">         
-              Jako již tradičně proběhne před hlavním závodem závod dětí. Start tohoto závodu je taktéž u Hotelu Ráztoka, cíl u spodní stanice lanové dráhy. <%= link_to 'více...', programme_page_path, class: 'more' %>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="ic-1"><span class="glyphicon glyphicon-paperclip"></span></div>
-            <div class="title-1"><h4>Vyhlášení závodu</h4></div>
-            <div class="text-1">
-              Ukončení závodu, včetně vyhlášení výsledků, je nově přemístěno k Hotelu Ráztoka. <%= link_to 'více...', programme_page_path, class: 'more' %>
-            </div>
-          </div>    
+
         </div>   
       </div>   
 

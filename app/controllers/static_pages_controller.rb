@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
   def programme
   end
 
+  def results
+  end
+
+  def gallery
+  end
+
 end
