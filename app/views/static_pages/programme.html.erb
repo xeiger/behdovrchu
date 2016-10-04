@@ -2,15 +2,15 @@
 
 <% 
   data = []
-  data << {key: 'Datum konání', value: 'sobota 5.12.2015'}
+  data << {key: 'Datum konání', value: '<b>sobota 3.12.2016</b>'}
   data << {key: 'Start závodu', value: '12:00, hromadný'}
-  data << {key: 'Trať závodu', value: 'beží se od Hotelu Ráztoka po Knížecí cestě k horní stanici lanové dráhy. Délka trati je 5700m, převýšení je 400m.'}
+  data << {key: 'Trať závodu', value: '<b>beží se od Hotelu Ráztoka po Knížecí cestě do prostoru běžeckého areálu na Pustevnách. Délka trati je 5800m, převýšení je 450m.</b>'}
   data << {key: 'Prezentace', value: 'probíhá v den závodu v bufetu Hotelu Ráztoka a to od 9:00 do 11:00.'}
-  data << {key: 'Startovné', value: 'při přihlášení a zaplacení předem 100 Kč (paltba musí přijít na účet do 30.11.2015 včetně), po tomto termínu a v den závodu 150 Kč.'}
+  data << {key: 'Startovné', value: 'při přihlášení a zaplacení předem <b>150 Kč</b> (paltba musí přijít na účet do <b>30.11.2016</b> včetně), po tomto termínu a v den závodu <b>200 Kč</b>.'}
   data << {key: 'Přihlášky', value: 'přihlásit se je možné skrze webový formulář. Po odeslání Vám přijde email s informacemi k zaplacení (v případě hromadného přihlášení nás prosím kontaktujte na našem emailu).'}
 
   data_small = []
-  data_small << {key: 'Datum konání', value: 'sobota 5.12.2015'}
+  data_small << {key: 'Datum konání', value: '<b>sobota 3.12.2016</b>'}
   data_small << {key: 'Start závodu', value: '10:00, hromadný'}
   data_small << {key: 'Trať závodu', value: 'beží se od Hotelu Ráztoka ke spodní stanici lanové dráhy. Délka trati je 600m.'}
   data_small << {key: 'Prezentace', value: 'probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'}
@@ -36,7 +36,7 @@
                   <div class="leftblockquote"><%= d[:key] %></div>
                 </div>
                 <div class="col-md-9">
-                  <blockquote><%= d[:value] %></blockquote>
+                  <blockquote><%= raw d[:value] %></blockquote>
                 </div>
               </div>
             <% end %>
@@ -57,49 +57,49 @@
                     <td class="center">Muži</td>
                     <td class="center">J</td>
                     <td class="center">17 let a méně</td>
-                    <td class="center">1998 a mladší</td>
+                    <td class="center">1999 a mladší</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Muži</td>
                     <td class="center">A</td>
                     <td class="center">18 - 39 let</td>
-                    <td class="center">1976 - 1997</td>
+                    <td class="center">1977 - 1998</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Muži</td>
                     <td class="center">B</td>
                     <td class="center">40 - 49 let</td>
-                    <td class="center">1966 - 1975</td>
+                    <td class="center">1967 - 1976</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Muži</td>
                     <td class="center">C</td>
                     <td class="center">50 - 59 let</td>
-                    <td class="center">1956 - 1965</td>
+                    <td class="center">1957 - 1966</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Muži</td>
-                    <td class="center">K</td>
+                    <td class="center">D</td>
                     <td class="center">60 let a více</td>
-                    <td class="center">1955 a starší</td>
+                    <td class="center">1956 a starší</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Ženy</td>
-                    <td class="center">D</td>
+                    <td class="center">ZJ</td>
                     <td class="center">17 let a méně</td>
-                    <td class="center">1998 a mladší</td>
+                    <td class="center">1999 a mladší</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Ženy</td>
-                    <td class="center">Z</td>
+                    <td class="center">ZA</td>
                     <td class="center">18 - 39 let</td>
-                    <td class="center">1976 - 1997</td>
+                    <td class="center">1977 - 1998</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Ženy</td>
-                    <td class="center">S</td>
+                    <td class="center">ZB</td>
                     <td class="center">40 let a více</td>
-                    <td class="center">1975 a starší</td>
+                    <td class="center">1976 a starší</td>
                   </tr>  
                 </tbody>
               </table>
@@ -107,8 +107,10 @@
 
             <h3>Doplňující informace</h3>
             <ul class="list-a">
+              <li><b>Limit v hlavním závodě je 300 startujících</b></li>
               <li>Každý <b>předem přihlášený</b> závodník obdrží při prezentaci tradiční tričko (při přihlášení na místě pouze do vydání zásob)</li>
-              <li>Pro závodníky bude zajištěn vývoz oblečení na Pustevny</li>
+              <li><b>Startovní číslo musí být umístěno viditelně na prsou</b></li>
+              <li>Pro závodníky bude zajištěn vývoz oblečení na Pustevny (do prostoru cíle)</li>
               <li>Pro závodníky bude zajištěn svoz lanovkou do Ráztoky</li>
               <li>V cíli bude pro závodníky zajištěn čaj</li>
               <li>Vyhlášení závodu bude probíhat v bufetu Hotelu Ráztoka přibližně ve 14:00</li>
@@ -138,7 +140,7 @@
                   <div class="leftblockquote"><%= d[:key] %></div>
                 </div>
                 <div class="col-md-9">
-                  <blockquote><%= d[:value] %></blockquote>
+                  <blockquote><%= raw d[:value] %></blockquote>
                 </div>
               </div>
             <% end %>
@@ -157,45 +159,45 @@
                 <tbody>
                   <tr class='even'>
                     <td class="center">Děti</td>
-                    <td class="center">D</td>
+                    <td class="center">M</td>
                     <td class="center">1 - 5 let</td>
-                    <td class="center">2010 - 2014</td>
+                    <td class="center">2011 - 2015</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Chlapci</td>
                     <td class="center">O</td>
                     <td class="center">6 - 7 let</td>
-                    <td class="center">2008 - 2009</td>
+                    <td class="center">2009 - 2010</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Chlapci</td>
                     <td class="center">P</td>
                     <td class="center">8 - 10 let</td>
-                    <td class="center">2005 - 2007</td>
+                    <td class="center">2006 - 2008</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Chlapci</td>
                     <td class="center">R</td>
                     <td class="center">11 - 13 let</td>
-                    <td class="center">2002 - 2004</td>
+                    <td class="center">2003 - 2005</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Dívky</td>
                     <td class="center">S</td>
                     <td class="center">6 - 7 let</td>
-                    <td class="center">2008 - 2009</td>
+                    <td class="center">2009 - 2010</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Dívky</td>
                     <td class="center">T</td>
                     <td class="center">8 - 10 let</td>
-                    <td class="center">2005 - 2007</td>
+                    <td class="center">2006 - 2008</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Dívky</td>
                     <td class="center">U</td>
                     <td class="center">11 - 13 let</td>
-                    <td class="center">2002 - 2004</td>
+                    <td class="center">2003 - 2005</td>
                   </tr>  
                 </tbody>
               </table>
@@ -206,6 +208,7 @@
               <li>Vyhlášení závodu bude probíhat v bufetu Hotelu Ráztoka ihned po závodě (po přesunutí závodníků zpět do Ráztoky)</li>
               <li><b>Každý závodník startuje na vlastní nebezpečí</b></li>
               <li>Závod se koná za každého počasí</li>
+              <li>Děti můžou běžet v doprovodu rodičů</li>
             </ul>   
 
 

@@ -39,6 +39,7 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-switch-rails (3.3.3)
     builder (3.2.2)
     byebug (6.0.2)
     coffee-rails (4.1.0)
@@ -162,6 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-switch-rails
   byebug
   jbuilder (~> 2.0)
   jquery-rails

@@ -9,17 +9,16 @@
       <div class="col-md-12">
         <h2>Přihláška</h2>
         <ul class="list-a">
+<% if false %>
           <li>
             Zastavili jsme on-line přihlašování. Pokud jste se nestihli přihlásit, máte možnost ještě v den závodu při prezentaci.
           </li>
-<% if false %>
+<% end %>
           <li>
             V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na emailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
           </li>
-<% end %>          
         </ul>
 
-<% if false %>
         <div class="space20"></div> 
 
         <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
@@ -59,6 +58,39 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
+                <label>Muž / Žena *</label>
+                <div style="margin-top: 10px">
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.male %>">
+                      <%= f.radio_button :male, "1", checked: @entrant.male %> Muž
+                    </label>
+                    <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.male %>">
+                      <%= f.radio_button :male, "0", checked: !@entrant.male %> Žena
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Jste členem horolezeckého oddílu? *</label>
+                <div style="margin-top: 10px">
+                  <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.climber %>">
+                      <%= f.radio_button :climber, "1", checked: @entrant.climber %> Ano
+                    </label>
+                    <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.climber %>">
+                      <%= f.radio_button :climber, "0", checked: !@entrant.climber %> Ne
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
                 <label>Oddíl</label>
                 <%= f.text_field :club, class: "form-control" %>
               </div>
@@ -77,14 +109,13 @@
               Pole označená hvězdičkou (*) jsou povinná!
             </div>
             <div class="col-md-8">
-              <%= button_tag( :class => "btn f-right") do %>
-                <i class="icon-ok"></i> Přihlásit
+              <%= button_tag( :class => "btn btn-info f-right") do %>
+                Přihlásit
               <% end %>
             </div>
           </div>
 
         <% end %>
-<% end %>
 
       </div>
     </div>
@@ -93,3 +124,6 @@
   </div>
 </div>
 <!-- Content End -->
+<script>
+$("[name='my-checkbox']").bootstrapSwitch();
+</script>
