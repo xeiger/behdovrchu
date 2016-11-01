@@ -952,7 +952,15 @@ tr.even {
 table a:hover{
   text-decoration:none;
 }
-        
+
+td.paid {
+  background: #31b0d5;
+}
+
+td.unpaid {
+  background: #d3d3d3;
+}
+
 /* --------------------------------------------------------	*/
 /*  Forms  */
 /* --------------------------------------------------------	*/

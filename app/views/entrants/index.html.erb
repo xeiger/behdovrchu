@@ -34,7 +34,7 @@
                 <td><%= entrant.surname %></td>
                 <td><%= entrant.club %></td>
                 <td class="center"><%= entrant.year %></td>
-                <td class="center"><%= entrant.paid ? 'ANO' : 'NE' %></td>
+                <td class="center <%= entrant.paid ? '' : 'un' %>paid"><%= entrant.paid ? 'ANO' : 'NE' %></td>
               </tr>  
             <% end %>
 
