@@ -1,0 +1,197 @@
+id;first_name;surname;year;club;gender;climber;paid
+226;Petr;Juříček;1974;;Muž;NE;ANO
+227;Kamil;Jeřábek;1976;VK Perun Ostrava;Muž;NE;ANO
+228;Jiří;Lebeda;1984;;Muž;NE;ANO
+229;Martin;Novotný ;1988;;Muž;NE;ANO
+230;Kateřina;Fujáková ;1985;SKOB Havirov;Žena;NE;ANO
+323;Tomáš;Střalka;1990;TJ Trojanovice Bystré;Muž;NE;ANO
+231;Sylva;Vričanová;1967;SKOB Havirov;Žena;NE;ANO
+232;Jan;Filip;1976;VK Perun Ostrava;Muž;NE;ANO
+233;Marek;Radomský;1989;;Muž;NE;ANO
+234;Tomáš;Wolf;1996;;Muž;NE;ANO
+235;Jan;Pícha;1985;SK Skialpin Pustevny;Muž;ANO;ANO
+237;Martin;Březina;1988;SDH Metylovice;Muž;NE;ANO
+238;Pavel;Bílek;1970;;Muž;NE;ANO
+239;Pavel;Florian;1980;;Muž;NE;NE
+240;Milan;Svěchota;1972;SKOB Ostrava;Muž;NE;ANO
+241;Radomír;Wolf;1988;;Muž;NE;NE
+242;Pavla;Monsportová;1993;;Žena;NE;ANO
+243;Petr;Trojan;1983;HO Přírodní vědy UK Praha;Muž;ANO;ANO
+244;Pavel;Michálek;1988;;Muž;NE;ANO
+245;Jiří;Lichota;1979;;Muž;NE;NE
+246;Petr;Valko;1972;Valko Partners;Muž;NE;ANO
+247;Otakar;Maceček;1961;SKOB Ostrava;Muž;NE;ANO
+248;Zuzana;Vítková;1986;;Žena;NE;ANO
+249;Patrik;Vyhlídal;1972;;Muž;NE;NE
+250;Veronika;Švachová;1988;;Žena;NE;NE
+251;Jakub;Jalůvka;1975;;Muž;NE;ANO
+252;Jiří;Pokluda;1979;Janys Extreme Racing;Muž;NE;ANO
+253;Cowboy;Kovboj;1978;Pohorska Jednota Radhost;Muž;NE;ANO
+254;Tomáš;Lipina;1966;Mk Seitl Ostrava;Muž;NE;ANO
+255;Filip;Kudrna;1973;HK Roznov;Muž;ANO;NE
+256;Šárka;Jasková;1984;;Žena;NE;ANO
+257;Jan;Zámečník;1980;AK Emila Zátopka Kopřivnice;Muž;NE;ANO
+258;Martin;Turek;1981;Frenštát Runners;Muž;NE;ANO
+259;Petr;Pavlík;1981;Zametači tratě.;Muž;NE;ANO
+260;Dagmar;Pavlová;1958;MBT;Žena;NE;ANO
+261;Jiří;Vinklárek;1961;TJ Rožnov pod Radhoštěm;Muž;NE;ANO
+262;Petr;Jelínek;1952;AK EZ Kopřivnice;Muž;NE;ANO
+263;Simona;Bílková;1971;;Žena;NE;ANO
+264;David;Fiala;1970;HO START OSTRAVA;Muž;ANO;ANO
+265;Hana;Fialová;1972;HO TJ BANÍK KARVINÁ;Žena;ANO;ANO
+266;Hanka;Přádková;1978;Montura Czech team;Žena;NE;ANO
+267;Ondra;Brož;1984;;Muž;NE;ANO
+268;Martin;Svoboda;1967;SKOB Frýdek-Místek;Muž;NE;ANO
+269;Jakub;Matějíček;1984;;Muž;NE;ANO
+270;Jiří;Bučánek;1956;;Muž;NE;ANO
+271;Miroslav;Přívětivý;1953;Příbor;Muž;NE;ANO
+272;Roman;Král;1969;;Muž;NE;ANO
+305;Danuše;Škrdová;1965;MK Seitl Ostrava;Žena;NE;ANO
+306;Marian;Mikuš;1981;Team LightBike ;Muž;NE;ANO
+307;Zuzana;Lašková;1987;HO SSK Vítkovice;Žena;ANO;NE
+308;Kateřina;Dohnalová;1976;;Žena;NE;NE
+309;Libor;Dziekanik;1974;HO Bivak Ostrava;Muž;ANO;ANO
+310;Petr;Dohnal;1973;;Muž;NE;NE
+311;Pavel;Šubert;1974;neběžecký kroužek;Muž;NE;ANO
+312;Jaromir;Giecek;1966;;Muž;NE;ANO
+313;Jitka;Gregořicová;1977;;Žena;ANO;ANO
+314;Lenka;Švidrnochová;1999;OOB TJ SLEZAN OPAVA;Žena;NE;NE
+315;Alžbeta;Straňanková;1990;;Žena;NE;ANO
+316;Tom;Janošek;1981;Fantastic Fór;Muž;NE;ANO
+317;Daniel;Smeta;1984;;Muž;NE;ANO
+318;Naďa;Kociánová;1966;;Žena;NE;ANO
+319;Tomáš;Kubečka;1972;;Muž;NE;ANO
+320;Lukáš;Pfneisl;1981;KoprSever;Muž;NE;ANO
+321;Arnošt;Mück;1959;;Muž;NE;ANO
+322;Zdeněk;Vývoda;1967;SKOB OSTRAVA;Muž;NE;ANO
+324;Patrik;Chýlek;1973;tichá;Muž;NE;ANO
+325;Patricie;Chýlková;2001;tichá;Žena;NE;ANO
+326;Jan;Fousek;1991;Mk Seitl Ostrava;Muž;NE;ANO
+327;Tomáš;Maliňák;1971;SHS James;Muž;ANO;ANO
+328;Dalibor;Olejník;1965;Ostrava - Poruba;Muž;NE;NE
+329;Jaroslav;Olejník;1967;SK Rozvíjej se poupátko;Muž;NE;ANO
+330;Andrej;Rybář;1972;L.A.Ryby;Muž;NE;ANO
+331;Ludmila;Rybářová;1972;L.A.Ryby;Žena;NE;ANO
+332;Bohumír;Najdek;1955;Racing Olešná;Muž;NE;ANO
+333;Roman;Čtvrtečka;1984;;Muž;NE;NE
+334;Lukáš;Gilar;1976;Tichá;Muž;NE;ANO
+335;Tereza;Fico;1987;;Žena;NE;NE
+336;Petr;Michálek;1991;;Muž;NE;ANO
+337;Martin;Maniš;1982;TOBI Sport Frenštát p.R.;Muž;ANO;ANO
+338;Marek;Březík;1973;VK Perun Ostrava;Muž;NE;ANO
+339;Marin;Milkov;1966;VK Perun Ostrava;Muž;NE;ANO
+340;Roman;Pecha;1966;VK Perun Ostrava;Muž;NE;ANO
+341;Jaroslav;Beseda;1961;kudrnáč;Muž;NE;ANO
+342;Jiří;Zátopek;1960;AK EZ Kopřivnice;Muž;NE;ANO
+343;Ludmila;Šokalová;1956;Pepa Team;Žena;NE;ANO
+344;Ladislav;Březina;1961;MK Seitl Ostrava;Muž;NE;ANO
+345;Marcel;Marcel tison;1974;MT Fitness;Muž;NE;NE
+346;Štefan;Groš;1961;S.K.Val.Království;Muž;NE;ANO
+347;Marek;Škapa;1971;MK Seitl Ostrava;Muž;NE;ANO
+348;Libor;Radomský;1966;;Muž;NE;ANO
+349;Irena;Slobodova;1961;;Žena;NE;ANO
+350;Josef;Skupieň;1957;Hranice;Muž;NE;ANO
+351;Ctibor;Pechlát;1976;Malý&Velký;Muž;NE;ANO
+352;Stanislav;Kováček;1983;MK Seitl Ostrava;Muž;NE;ANO
+353;Vladimír;Maloň;1980;Gumárny Zubří ;Muž;NE;ANO
+354;Rudolf;Šelepa;1964;;Muž;NE;ANO
+355;Petr;Šelepa;1989;;Muž;NE;ANO
+356;David;Bajgar;1976;STS Chvojkovice-Brod;Muž;NE;ANO
+357;Libor;Petřek;1971;TJ Gumárny Zubří;Muž;NE;ANO
+358;Libor;Tomečka;1962;CETRIS Hranice;Muž;NE;ANO
+359;René;Stošek;1972;;Muž;NE;ANO
+360;Ondřej;Pop;1994;;Muž;NE;ANO
+361;Jiri;Konecny;1977;;Muž;NE;ANO
+362;Martin;Kudlik;1978;;Muž;NE;ANO
+363;Jan;Izvorský;1981;SDH METYLOVICE;Muž;NE;ANO
+364;Antonín;Kubáň;1992;;Muž;NE;ANO
+365;Denisa;Izvorská;1986;SDH Metylovice;Žena;NE;ANO
+366;Svatava;Hanzlová;1966;PJR Frenštát ;Žena;NE;ANO
+367;Filip;Klumpar;1997;;Muž;NE;ANO
+368;Zuzana;Bílková;1987;SDH Metylovice;Žena;NE;ANO
+370;Petra;Šnapková;1985;Tři křížky CF;Žena;ANO;ANO
+373;Petr;Siročák;1978;Tři křižky CF;Muž;ANO;ANO
+374;Bronislav;Hlaváč;1977;AW Sports Team;Muž;NE;ANO
+375;Ondřej;Dobiáš;1997;Kopřivnice;Muž;NE;ANO
+376;Pavla;Šinoglová;1990;;Žena;NE;ANO
+377;Marek;Sonnenschein;1989;;Muž;NE;ANO
+378;Jakub;Fabián;1990;;Muž;NE;ANO
+379;Jakub;Jirka;1979;;Muž;NE;ANO
+380;Jan;Kubík;1986;;Muž;NE;ANO
+381;Erich;Rinka;1954;Prajzský BK Kravaře;Muž;NE;NE
+382;Veronika;Horutová;1988;SK ZaFaR Frenštát p. R.;Žena;NE;ANO
+383;Jakub;Zecha;1996;;Muž;NE;ANO
+384;Michaela;Sýkorová;1998;;Žena;NE;ANO
+385;Filip;Rek;1978;TOBI Sport Frenštát p.R.;Muž;NE;NE
+386;Miroslav;Merta;1984;Lepus.cz;Muž;NE;ANO
+387;Roman;Jurečka;1978;Cyklistický klub Frenštát pod Radhoštěm ;Muž;NE;ANO
+388;Martin;Němeček;1973;Valašská Bystřice;Muž;NE;ANO
+389;Břetislav;Blahuta;1961;příznivec HO START Ostrava;Muž;ANO;ANO
+390;Tomáš;Blahuta;1992;Biatlon klub Poruba;Muž;ANO;ANO
+391;Aneta;Blahutová;1994;příznivec HO START Ostrava;Žena;ANO;ANO
+392;Petr;Ďásek;1963;HO START Ostrava;Muž;ANO;ANO
+393;Radka;Fukalová;1970;HO START Ostrava;Žena;ANO;ANO
+394;Radim;Kaluža;1976;příznivec HO START Ostrava;Muž;ANO;ANO
+395;Lukáš;Klimánek;1979;HO START Ostrava;Muž;ANO;ANO
+396;Petra;Klimánková;1978;příznivec HO START Ostrava;Žena;ANO;ANO
+397;Petr;Mareš;1979;HO START Ostrava;Muž;ANO;ANO
+398;Lukáš;Mildorf;1979;HO START Ostrava;Muž;ANO;ANO
+399;Helena;Mildorfová;1978;HO START Ostrava;Žena;ANO;ANO
+400;Pavel;Muck;1978;HO START Ostrava;Muž;ANO;ANO
+401;Petr;Nováček;1959;HO START Ostrava;Muž;ANO;ANO
+402;Jan;Ondruš;1975;HO START Ostrava;Muž;ANO;ANO
+403;Filip;Skřivan;1985;příznivec HO START Ostrava;Muž;ANO;ANO
+404;Marek;Stecker;1974;HO START Ostrava;Muž;ANO;ANO
+405;Petr;Sotolář;1982;HO START Ostrava;Muž;ANO;ANO
+406;Pavel;Šustek;1979;HO START Ostrava;Muž;ANO;ANO
+407;Marie;Zagorová;1987;příznivec HO START Ostrava;Žena;ANO;ANO
+408;Ondřej;Zuzaňák;1991;Biatlon klub Poruba;Muž;ANO;ANO
+409;Jan;Polášek;1980;Dream Team Havířov;Muž;NE;ANO
+410;Richard;Chmelík;1990;Dream Team Havířov;Muž;NE;ANO
+411;Stanislav;Záleský;1987;Dream Team Havířov;Muž;NE;ANO
+412;Vojtěch;Zecha;2001;Dream Team Havířov;Muž;NE;ANO
+413;Nela;Richterová;1994;;Žena;NE;ANO
+414;Tomáš;Jalůvka;1977;Caramba! Team;Muž;NE;ANO
+415;Renáta;Jalůvková;1978;Caramba! Team;Žena;NE;ANO
+416;Lukáš;Reček;1978;ROD Ostrava;Muž;NE;ANO
+417;Vladimír;Mazánek;1979;;Muž;NE;ANO
+418;Roman;Janeček;1981;Caramba! Team;Muž;NE;ANO
+419;René;Vavřík;1970;SKOB Ostrava;Muž;NE;ANO
+420;Petr;Blahovec;1981;;Muž;NE;ANO
+421;Dobromila;Běčáková;1970;:-);Žena;NE;ANO
+422;Tomáš;Svoboda;1975;;Muž;NE;NE
+423;Jura;Mynář;1965;MTB Ondřejník;Muž;NE;NE
+424;Jakub;Ambros;1987;AKEZ Kopřivnice;Muž;NE;ANO
+426;Vilém;Zuzaňák;1968;Biatlon Ostrava;Muž;NE;ANO
+427;Pavel;Štefanský;1968;Havířov;Muž;NE;ANO
+428;Dan;Jalůvka;1964;Pohorská Jednota Radhošť;Muž;NE;ANO
+429;Lucie;Brusová;1975;;Žena;NE;ANO
+430;Lukáš;Štefek;1989;MTB Ondřejník;Muž;NE;NE
+431;Martin;Geryk;1987;Veřovice;Muž;NE;NE
+432;Michal;Dymáček;1964;;Muž;NE;ANO
+433;Pavel;Slíva;1971;Kopřivnice;Muž;NE;ANO
+434;Šárka;Hermanová;1977;příznivkyně HO START Ostrava;Žena;NE;ANO
+435;Dalibor;Kaláb;1972;tandemlety.cz;Muž;NE;ANO
+436;Natálie;Marynčáková;1989;AK Šnek;Žena;NE;ANO
+437;Jiří;Lešinský;1946;PJR Frenštát;Muž;NE;NE
+438;Radim;Šimeček;1969;Midar Příbor;Muž;NE;ANO
+439;Jana;Kunčická;1988;AK ŠNEK;Žena;NE;ANO
+440;Jan;Kunčický;1999;AK ŠNEK;Muž;NE;ANO
+441;Lukáš;Olejníček;1988;X-PARK FRANTIŠKOV;Muž;NE;ANO
+442;Petr;Šimíček;1979;SDH Mniší;Muž;NE;ANO
+443;Tomáš;Hrabovský;1983;SDH Mniší;Muž;NE;ANO
+444;Pavel;Špaček;1982;SDH Mniší;Muž;NE;ANO
+445;Stanislav;Žabenský;1991;SDH Mniší;Muž;NE;ANO
+446;Václav;Harabiš;1993;SDH Mniší;Muž;NE;ANO
+447;Ondřej;Marák;1991;SDH Mniší;Muž;NE;ANO
+448;Tomáš;Černošek;1994;SDH Mniší;Muž;NE;ANO
+449;Michal;Jirka;1984;;Muž;NE;ANO
+450;Jiří;Štývar;1989;;Muž;NE;ANO
+451;Antonin;Veselý;1976;ROD Ostrava;Muž;ANO;ANO
+452;Marek;Holášek;1987;;Muž;NE;NE
+453;Petr;Kalina;1976;HO skialpin Pustevny;Muž;ANO;ANO
+454;Ladislav;Hlavatík;1956;Racing Olešná F-M;Muž;NE;ANO
+455;Jan;Hlavatík;1985;Racing Olešná F-M;Muž;NE;ANO
+456;Michal;Janeček;1990;;Muž;NE;ANO
+458;Petr;Němec;1977;Morituri te salutant;Muž;NE;NE
+459;Ivan;Kamenec;1943;;Muž;NE;NE
