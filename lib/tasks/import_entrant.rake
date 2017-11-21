@@ -1,9 +1,9 @@
+require 'csv'
+
 namespace :entrant do
 
   desc "export billing log to CSV for italian billings"
   task :import => :environment do
-
-    User.logged_user = User.system
 
     Rails.logger.info("[IMPORT_POLICIES] START")
 
