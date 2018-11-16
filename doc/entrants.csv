@@ -1,29 +1,21 @@
-Jan;Polášek;AO Slavia Havířov;;jendapol@centrum.cz;00001000061;1980;true;false;150
-Lukáš;Ožana;AO Slavia Havířov;;jendapol@centrum.cz;00001000062;1997;true;false;150
-Stanislav;Záleský;AO Slavia Havířov;;jendapol@centrum.cz;00001000063;1987;true;false;150
-Vojtěch;Zecha;AO Slavia Havířov;;jendapol@centrum.cz;00001000064;2001;true;false;150
-Petr;Ježek;AO Slavia Havířov;;jendapol@centrum.cz;00001000065;2001;true;false;150
-Edita;Pipreková;AO Slavia Havířov;;jendapol@centrum.cz;00001000066;2003;false;false;150
-Petr;Šimíček;SDH Mniší;;simicekp@seznam.cz;00001000071;1979;true;false;150
-Tomáš;Hrabovský;SDH Mniší;;HrabyTomas@seznam.cz;00001000072;1983;true;false;150
-Pavel;Špaček;SDH Mniší;;pavelspaca@centrum.cz;00001000073;1982;true;false;150
-Stanislav;Žabenský;SDH Mniší;;standa.zabensky@centrum.cz;00001000074;1991;true;false;150
-Václav;Harabiš;SDH Mniší;;harabis.v@seznam.cz;00001000075;1993;true;false;150
-Ondřej;Marák;SDH Mniší;;ondrej.marak@gmail.com;00001000076;1991;true;false;150
-Jakub;Marák;SDH Mniší;;jakub.marak@gmail.com;00001000077;1994;true;false;150
-Tomáš;Mrkva;SDH Mniší;;tomas.mrkva@vlcovice.net;00001000078;2001;true;false;150
-Tomáš;Blahuta;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000081;1992;true;false;150
-Petr;Ďásek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000082;1963;true;true;150
-Radka;Fukalová;HO START Ostrava;;petr.dasek@portaflex.cz;00001000083;1970;false;true;150
-Lukáš;Klimánek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000084;1979;true;true;150
-Petr;Mareš;HO START Ostrava;;petr.dasek@portaflex.cz;00001000085;1979;true;true;150
-Lukáš;Mildorf;HO START Ostrava;;petr.dasek@portaflex.cz;00001000086;1979;true;true;150
-Luděk;Mimra;HO START Ostrava;;petr.dasek@portaflex.cz;00001000087;1958;true;true;150
-Tomáš;Nováček;HO START Ostrava;;petr.dasek@portaflex.cz;00001000088;1994;true;true;150
-Jan;Ondruš;HO START Ostrava;;petr.dasek@portaflex.cz;00001000089;1975;true;true;150
-Petr;Sotolář;HO START Ostrava;;petr.dasek@portaflex.cz;00001000090;1982;true;true;150
-Pavel;Šustek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000091;1979;true;true;150
-Adam;Vávra;HO START Ostrava;;petr.dasek@portaflex.cz;00001000092;1984;true;true;150
-Petr;Vávra;HO START Ostrava;;petr.dasek@portaflex.cz;00001000093;1962;true;true;150
-Michal;Kratochvíl;HO START Ostrava;;petr.dasek@portaflex.cz;00001000094;1971;true;true;150
-Markéta;Bambuchová;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000095;1992;false;false;150
+Tomáš;Blahuta;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000101;1992;true;false
+Petr;Ďásek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000102;1963;true;true
+Lukáš;Klimánek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000103;1979;true;true
+Petr;Mareš;HO START Ostrava;;petr.dasek@portaflex.cz;00001000104;1979;true;true
+Luděk;Mimra;HO START Ostrava;;petr.dasek@portaflex.cz;00001000105;1958;true;true
+Jan;Ondruš;HO START Ostrava;;petr.dasek@portaflex.cz;00001000106;1975;true;true
+Petr;Sotolář;HO START Ostrava;;petr.dasek@portaflex.cz;00001000107;1982;true;true
+Pavel;Šustek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000108;1979;true;true
+Petr;Vávra;HO START Ostrava;;petr.dasek@portaflex.cz;00001000109;1962;true;true
+Markéta;Bambuchová;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000110;1992;false;false
+Jan;Zámostný;HO START Ostrava;;petr.dasek@portaflex.cz;00001000111;1992;true;true
+Adam;Růžička;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000112;1990;true;false
+Pavel;Mück;HO START Ostrava;;petr.dasek@portaflex.cz;00001000113;1978;true;true
+Eva;Urbaníková;HO START Ostrava;;petr.dasek@portaflex.cz;00001000114;1980;false;true
+Jan;Macháček;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000115;1993;true;false
+Břetislav;Blahuta;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000116;1961;true;false
+Ondřej;Zuzaňák;příznivec HO START Ostrava ;;petr.dasek@portaflex.cz;00001000117;1991;true;false
+Marek;Stecker;HO START Ostrava;;petr.dasek@portaflex.cz;00001000118;1974;true;true
+Jiří;Šrámek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000119;1971;true;true
+Vladimír;Mazánek;HO START Ostrava;;petr.dasek@portaflex.cz;00001000120;1979;true;true
+Filip;Skřivan;HO START Ostrava;;petr.dasek@portaflex.cz;00001000121;1985;true;true
