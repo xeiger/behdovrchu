@@ -8,13 +8,15 @@
     <div class="row">
       <div class="col-md-12">
         <h2>Přihláška</h2>
+<% if Entrant.count >= 299 %>
         <ul class="list-a">
-<% if false %>
           <li>
-            Zastavili jsme on-line přihlašování. Pokud jste se nestihli přihlásit, máte možnost ještě v den závodu při prezentaci.
+            Zastavili jsme on-line přihlašování, jelikož limit 300 závodníků v hlavním závodě byl naplněn.
           </li>
-<% end %>
+        </ul>
+<% else %>
 
+        <ul class="list-a">
           <li>
             V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na emailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
           </li>
@@ -116,6 +118,7 @@
           </div>
 
         <% end %>
+<% end %>
       </div>
     </div>
     <div class="space50"></div> 
