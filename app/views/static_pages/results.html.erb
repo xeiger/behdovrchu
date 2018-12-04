@@ -278,66 +278,120 @@
     <div class="row">
       <div class="col-md-12">
 
-
-        <h2>Výsledky 49. ročníku</h2>
-
         <div class="space20"></div>
 
-        <div class="col-md-12 right">
-          výsledky ke stažení <a class="more" href="/hlavni_zavod.pdf" target="_blank">hlavni_zavod.pdf</a> a <a class="more" href="/detsky_zavod.pdf" target="_blank">detsky_zavod.pdf</a>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#actual" aria-controls="actual" role="tab" data-toggle="tab">Aktuální ročník</a></li>
+          <li role="presentation"><a href="#older" aria-controls="older" role="tab" data-toggle="tab">Starší ročníky</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+          <!-- aktualni rocnik -->
+          <div role="tabpanel" class="tab-pane active" id="actual">
+            <h2>Výsledky 49. ročníku</h2>
+
+            <div class="space20"></div>
+
+            <div class="col-md-12 right">
+              výsledky ke stažení <a class="more" href="/hlavni_zavod.pdf" target="_blank">hlavni_zavod.pdf</a> a <a class="more" href="/detsky_zavod.pdf" target="_blank">detsky_zavod.pdf</a>
+            </div>
+
+            <div class="space10"></div>
+
+            <table class="table table-bordered">
+              <thead>
+                <tr class="result">
+                  <th class="v-middle" rowspan="2">#</th>
+                  <th colspan="5">Muži</th>
+                  <th colspan="3">Ženy</th>
+                  <th class="v-middle" rowspan="2">St.<br>číslo</th>
+                  <th class="v-middle" rowspan="2">Jméno</th>
+                  <th class="v-middle" rowspan="2">Oddíl</th>
+                  <th class="v-middle" rowspan="2">Ročník</th>
+                  <th class="v-middle" rowspan="2">Čas</th>
+                  <th class="v-middle" rowspan="2">Ztráta</th>
+                </tr>
+                <tr class="result">
+                  <th class="w-5">J</th>
+                  <th class="w-5">A</th>
+                  <th class="w-5">B</th>
+                  <th class="w-5">C</th>
+                  <th class="w-5">D</th>
+                  <th class="w-5">ZJ</th>
+                  <th class="w-5">ZA</th>
+                  <th class="w-5">ZB</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <% results.each_with_index do |r, index| %>
+                  <tr class="<%= index%2 == 0 ? 'even' : 'odd' %>">
+                      <td class="center"><%= index + 1 %></td>
+                      <td class="center w-5"><%= r[1] %></td>
+                      <td class="center w-5"><%= r[2] %></td>
+                      <td class="center w-5"><%= r[3] %></td>
+                      <td class="center w-5"><%= r[4] %></td>
+                      <td class="center w-5"><%= r[5] %></td>
+                      <td class="center w-5"><%= r[6] %></td>
+                      <td class="center w-5"><%= r[7] %></td>
+                      <td class="center w-5"><%= r[8] %></td>
+                      <td class="center"><%= r[9] %></td>
+                      <td><%= r[10] %></td>
+                      <td><%= r[11] %></td>
+                      <td class="center"><%= r[12] %></td>
+                      <td class="center"><%= r[13] %></td>
+                      <td class="center"><%= r[14] %></td>
+                  </tr> 
+                <% end %>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- starsi rocniky -->
+          <div role="tabpanel" class="tab-pane" id="older">
+            <div class="row">
+
+              <div class="col-md-4">
+                <h3>2017</h3>
+
+                <div class="space10"></div>
+
+                <ul class="list-a">
+                  <li><a class="more" href="/hlavni_zavod_2017.pdf" target="_blank">hlavni_zavod_2017.pdf</a>
+                  <li><a class="more" href="/detsky_zavod_2017.pdf" target="_blank">detsky_zavod_2017.pdf</a>
+                </ul>   
+              </div>
+
+              <div class="col-md-4">
+                <h3>2016</h3>
+
+                <div class="space10"></div>
+
+                <ul class="list-a">
+                  <li><a class="more" href="/hlavni_zavod_2016.pdf" target="_blank">hlavni_zavod_2016.pdf</a>
+                  <li><a class="more" href="/detsky_zavod_2016.pdf" target="_blank">detsky_zavod_2016.pdf</a>
+                </ul>   
+              </div>
+
+              <div class="col-md-4">
+                <h3>2015</h3>
+
+                <div class="space10"></div>
+
+                <ul class="list-a">
+                  <li><a class="more" href="/hlavni_zavod_2015.pdf" target="_blank">hlavni_zavod_2015.pdf</a>
+                  <li><a class="more" href="/detsky_zavod_2015.pdf" target="_blank">detsky_zavod_2015.pdf</a>
+                </ul>   
+              </div>
+
+            </div>
+          </div>
         </div>
-
-        <div class="space10"></div>
-
-        <table class="table table-bordered">
-          <thead>
-            <tr class="result">
-              <th class="v-middle" rowspan="2">#</th>
-              <th colspan="5">Muži</th>
-              <th colspan="3">Ženy</th>
-              <th class="v-middle" rowspan="2">St.<br>číslo</th>
-              <th class="v-middle" rowspan="2">Jméno</th>
-              <th class="v-middle" rowspan="2">Oddíl</th>
-              <th class="v-middle" rowspan="2">Ročník</th>
-              <th class="v-middle" rowspan="2">Čas</th>
-              <th class="v-middle" rowspan="2">Ztráta</th>
-            </tr>
-            <tr class="result">
-              <th class="w-5">J</th>
-              <th class="w-5">A</th>
-              <th class="w-5">B</th>
-              <th class="w-5">C</th>
-              <th class="w-5">D</th>
-              <th class="w-5">ZJ</th>
-              <th class="w-5">ZA</th>
-              <th class="w-5">ZB</th>
-            </tr>
-          </thead>
-
-          <tbody>
-
-            <% results.each_with_index do |r, index| %>
-              <tr class="<%= index%2 == 0 ? 'even' : 'odd' %>">
-                  <td class="center"><%= index + 1 %></td>
-                  <td class="center w-5"><%= r[1] %></td>
-                  <td class="center w-5"><%= r[2] %></td>
-                  <td class="center w-5"><%= r[3] %></td>
-                  <td class="center w-5"><%= r[4] %></td>
-                  <td class="center w-5"><%= r[5] %></td>
-                  <td class="center w-5"><%= r[6] %></td>
-                  <td class="center w-5"><%= r[7] %></td>
-                  <td class="center w-5"><%= r[8] %></td>
-                  <td class="center"><%= r[9] %></td>
-                  <td><%= r[10] %></td>
-                  <td><%= r[11] %></td>
-                  <td class="center"><%= r[12] %></td>
-                  <td class="center"><%= r[13] %></td>
-                  <td class="center"><%= r[14] %></td>
-              </tr> 
-            <% end %>
-
-          </tbody>
-        </table>
 
       </div>
     </div>
