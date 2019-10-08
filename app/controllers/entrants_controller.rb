@@ -9,7 +9,7 @@ class EntrantsController < ApplicationController
   def create
     @entrant = Entrant.new(entrant_params)
 
-    if Entrant.where(archived: false).count < 300 and @entrant.save
+    if Entrant.where(archived: false).count < 350 and @entrant.save
       flash[:notice] = "Vaše přihláška byla přijata, v emailu najdete informace k zaplacení startovného."
       redirect_to entrants_path
     else

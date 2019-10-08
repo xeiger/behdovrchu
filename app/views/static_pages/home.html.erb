@@ -3,7 +3,7 @@
   <div class="container">
     <div class="f-center">
       <h2>Běh do vrchu Ráztoka - Pustevny</h2>
-      <div class="head-info">V sobotu 1.12.2018 se uskutečnil 49. ročník tradičního běžeckého závodu "Běh do vrchu Ráztoka – Pustevny".</div>
+      <div class="head-info">V sobotu 7.12.2019 se uskuteční 50. ročník tradičního běžeckého závodu "Běh do vrchu Ráztoka – Pustevny".</div>
       <div class="head-info">Pořádá tým <b>BeskydSki</b> ve spolupráci s lyžařským střediskem <b>Pustevny, s.r.o.</b></div>
     </div>
     <div class="f-hr"></div>
@@ -11,28 +11,28 @@
     <div class="row">
       <div class="col-md-12">
         <div class="row">
-
+<% if false %>
           <div class="col-md-4">
             <div class="ic-1"><span class="glyphicon glyphicon-paperclip"></span></div>
-            <div class="title-1"><h4>Výsledky závodu</h4></div>
+            <div class="title-1"><h4>Na Pustevny se běhá již 50 let</h4></div>
             <div class="text-1">
-              Přidali jsem na web zároveň starší výsledky. Více <%= link_to 'zde...', results_page_path, class: 'more' %>
+              Doufáme, že si nenecháte ujít 
+            </div>
+          </div>
+<% end %>
+          <div class="col-md-6">
+            <div class="ic-1"><span class="glyphicon glyphicon-paperclip"></span></div>
+            <div class="title-1"><h4>Registrace do závodu spuštěna</h4></div>
+            <div class="text-1">
+              Již jsme spustili registraci. Pro přihlášení použijte  <%= link_to 'webový formulář', new_entrant_path, class: 'more' %>.
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="ic-1"><span class="glyphicon glyphicon-paperclip"></span></div>
-            <div class="title-1"><h4>Fotky ze závodu</h4></div>
+            <div class="title-1"><h4>Kapacita závodu</h4></div>
             <div class="text-1">
-              Máme pro Vás první fotky. Fotky od dalších fotografů budou postupně přibývat. Více <%= link_to 'zde...', gallery_page_path, class: 'more' %>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span class="glyphicon glyphicon-paperclip"></span></div>
-            <div class="title-1"><h4>Nalezena čepice</h4></div>
-            <div class="text-1">
-              Zůstala nám jedna pletená čepice. Pokud Vám patří, tak se ozvěte, rádi Vám ji vrátíme.
+              Vzhledem k loňské vysoké účasti jsme se rozhodli navýšit limit pro počet startujících v hlavním závodě na 350.
             </div>
           </div>
 

@@ -2,15 +2,15 @@
 
 <% 
   data = []
-  data << {key: 'Datum konání', value: '<b>sobota 1.12.2018</b>'}
+  data << {key: 'Datum konání', value: '<b>sobota 7.12.2019</b>'}
   data << {key: 'Start závodu', value: '12:00, hromadný'}
   data << {key: 'Trať závodu', value: '<b>Beží se od Hotelu Ráztoka po Knížecí cestě do prostoru horní stanice lanové dráhy. Délka trati je 5700&nbsp;m, převýšení je 400&nbsp;m.</b>'}
   data << {key: 'Prezentace', value: 'Probíhá v den závodu před Hotelem Ráztoka a to od 9:00 do 11:00.'}
-  data << {key: 'Startovné', value: 'Při přihlášení a zaplacení předem <b>150 Kč</b> (platba musí přijít na účet do <b>26.11.2018</b> včetně), po tomto termínu a&nbsp;v&nbsp;den závodu <b>200 Kč</b>.'}
+  data << {key: 'Startovné', value: 'Při přihlášení a zaplacení předem <b>150 Kč</b> (platba musí přijít na účet do <b>2.12.2019</b> včetně), po tomto termínu a&nbsp;v&nbsp;den závodu <b>200 Kč</b>.'}
   data << {key: 'Přihlášky', value: "Přihlašujte se prostřednictvím <a href=#{new_entrant_path}>webového formuláře</a>. Po odeslání formuláře obdržíte email s platebními údaji. (Máte-li zájem o hromadnou přihlášku, kontaktujte nás prosím emailem.)"}
 
   data_small = []
-  data_small << {key: 'Datum konání', value: '<b>sobota 1.12.2018</b>'}
+  data_small << {key: 'Datum konání', value: '<b>sobota 7.12.2019</b>'}
   data_small << {key: 'Start závodu', value: '10:00, hromadný'}
   data_small << {key: 'Trať závodu', value: 'Beží se od Hotelu Ráztoka ke spodní stanici lanové dráhy. Délka trati je 600m.'}
   data_small << {key: 'Prezentace', value: 'Probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'}
@@ -31,13 +31,9 @@
           <div class="col-md-12">
 
             <% data.each do |d| %>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="leftblockquote"><%= d[:key] %></div>
-                </div>
-                <div class="col-md-9">
-                  <blockquote><%= raw d[:value] %></blockquote>
-                </div>
+              <div class="bs-callout bs-callout-danger">
+                <h4><%= d[:key] %></h4>
+                <p><%= raw d[:value] %></p>
               </div>
             <% end %>
 
@@ -57,49 +53,49 @@
                     <td class="center">Muži</td>
                     <td class="center">J</td>
                     <td class="center">17 let a méně</td>
-                    <td class="center">2001 a mladší</td>
+                    <td class="center">2002 a mladší</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Muži</td>
                     <td class="center">A</td>
                     <td class="center">18 - 39 let</td>
-                    <td class="center">1979 - 2000</td>
+                    <td class="center">1980 - 2001</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Muži</td>
                     <td class="center">B</td>
                     <td class="center">40 - 49 let</td>
-                    <td class="center">1969 - 1978</td>
+                    <td class="center">1970 - 1979</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Muži</td>
                     <td class="center">C</td>
                     <td class="center">50 - 59 let</td>
-                    <td class="center">1959 - 1968</td>
+                    <td class="center">1960 - 1969</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Muži</td>
                     <td class="center">D</td>
                     <td class="center">60 let a více</td>
-                    <td class="center">1958 a starší</td>
+                    <td class="center">1959 a starší</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Ženy</td>
                     <td class="center">ZJ</td>
                     <td class="center">17 let a méně</td>
-                    <td class="center">2001 a mladší</td>
+                    <td class="center">2002 a mladší</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Ženy</td>
                     <td class="center">ZA</td>
                     <td class="center">18 - 39 let</td>
-                    <td class="center">1979 - 2000</td>
+                    <td class="center">1980 - 2001</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Ženy</td>
                     <td class="center">ZB</td>
                     <td class="center">40 let a více</td>
-                    <td class="center">1978 a starší</td>
+                    <td class="center">1979 a starší</td>
                   </tr>  
                 </tbody>
               </table>
@@ -107,7 +103,7 @@
 
             <h3>Doplňující informace</h3>
             <ul class="list-a">
-              <li><b>Limit v hlavním závodě je 300 startujících</b></li>
+              <li><b>Limit v hlavním závodě je 350 startujících</b></li>
               <li>Každý <b>předem přihlášený</b> závodník obdrží při prezentaci tradiční tričko (při přihlášení na místě pouze do vydání zásob)</li>
               <li><b>Startovní číslo musí být umístěno viditelně na prsou</b></li>
               <li>Pro závodníky bude zajištěn vývoz oblečení na Pustevny</li>
@@ -135,13 +131,9 @@
           <div class="col-md-12">
 
             <% data_small.each do |d| %>
-              <div class="row">
-                <div class="col-md-3">
-                  <div class="leftblockquote"><%= d[:key] %></div>
-                </div>
-                <div class="col-md-9">
-                  <blockquote><%= raw d[:value] %></blockquote>
-                </div>
+              <div class="bs-callout bs-callout-danger">
+                <h4><%= d[:key] %></h4>
+                <p><%= raw d[:value] %></p>
               </div>
             <% end %>
 
@@ -161,43 +153,43 @@
                     <td class="center">Děti</td>
                     <td class="center">M</td>
                     <td class="center">1 - 5 let</td>
-                    <td class="center">2013 - 2017</td>
+                    <td class="center">2014 - 2018</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Chlapci</td>
                     <td class="center">O</td>
                     <td class="center">6 - 7 let</td>
-                    <td class="center">2011 - 2012</td>
+                    <td class="center">2012 - 2013</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Chlapci</td>
                     <td class="center">P</td>
                     <td class="center">8 - 10 let</td>
-                    <td class="center">2008 - 2010</td>
+                    <td class="center">2009 - 2011</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Chlapci</td>
                     <td class="center">R</td>
                     <td class="center">11 - 13 let</td>
-                    <td class="center">2005 - 2007</td>
+                    <td class="center">2006 - 2008</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Dívky</td>
                     <td class="center">S</td>
                     <td class="center">6 - 7 let</td>
-                    <td class="center">2011 - 2012</td>
+                    <td class="center">2012 - 2013</td>
                   </tr>  
                   <tr class='odd'>
                     <td class="center">Dívky</td>
                     <td class="center">T</td>
                     <td class="center">8 - 10 let</td>
-                    <td class="center">2008 - 2010</td>
+                    <td class="center">2009 - 2011</td>
                   </tr>  
                   <tr class='even'>
                     <td class="center">Dívky</td>
                     <td class="center">U</td>
                     <td class="center">11 - 13 let</td>
-                    <td class="center">2005 - 2007</td>
+                    <td class="center">2006 - 2008</td>
                   </tr>  
                 </tbody>
               </table>

@@ -1,7 +1,8 @@
 <%= render :partial => 'partials/titlebar', locals: {title: 'Výsledky'} %>
 
 <%
-
+  results = []
+=begin
   results = [
       [1,"1","","","","","","","",269,"Grebik Radim","Titan Trilife",2001,"25:05","00:00"],
       [2,"","1","","","","","","",153,"Václavík Filip","TITAN TRILIFE",1995,"26:07","01:02"],
@@ -269,6 +270,7 @@
       [264,"","","","","","","","18",260,"Adamcová Radka","",1977,"59:37","34:32"],
       [265,"","112","","","","","","",220,"Řepka Michal","BAUR TEAM",1984,"59:37","34:32"],
     ]
+=end
 %>
 
 <!-- Content -->
@@ -291,10 +293,10 @@
 
           <!-- aktualni rocnik -->
           <div role="tabpanel" class="tab-pane active" id="actual">
-            <h2>Výsledky 49. ročníku</h2>
+            <h2>Výsledky 50. ročníku</h2>
 
             <div class="space20"></div>
-
+<% if false %>
             <div class="col-md-12 right">
               výsledky ke stažení <a class="more" href="/hlavni_zavod.pdf" target="_blank">hlavni_zavod.pdf</a> a <a class="more" href="/detsky_zavod.pdf" target="_blank">detsky_zavod.pdf</a>
             </div>
@@ -350,11 +352,25 @@
 
               </tbody>
             </table>
+<% end %>
+
           </div>
 
           <!-- starsi rocniky -->
           <div role="tabpanel" class="tab-pane" id="older">
+
             <div class="row">
+
+              <div class="col-md-4">
+                <h3>49. ročník - 2018</h3>
+
+                <div class="space10"></div>
+
+                <ul class="list-a">
+                  <li><a class="more" href="/hlavni_zavod_2017.pdf" target="_blank">hlavni_zavod_2018.pdf</a>
+                  <li><a class="more" href="/detsky_zavod_2017.pdf" target="_blank">detsky_zavod_2018.pdf</a>
+                </ul>   
+              </div>
 
               <div class="col-md-4">
                 <h3>48. ročník - 2017</h3>
@@ -377,6 +393,12 @@
                   <li><a class="more" href="/detsky_zavod_2016.pdf" target="_blank">detsky_zavod_2016.pdf</a>
                 </ul>   
               </div>
+
+            </div>
+
+
+
+            <div class="row">
 
               <div class="col-md-4">
                 <h3>46. ročník - 2015</h3>

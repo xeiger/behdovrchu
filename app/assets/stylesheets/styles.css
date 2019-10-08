@@ -1,3 +1,5 @@
+/*#e30713
+
 /* --------------------------------------------------------	*/
 /*	Twitter Bootstrap */
 /*	Responsive media queries */
@@ -88,7 +90,7 @@ blockquote {
   color:#83adff;
   margin:10px 0px;
   padding:5px 20px;
-  border-left:4px solid #fda056; 
+  border-left:4px solid #ca2f37; 
   font-size:15px;
 }
 
@@ -109,7 +111,7 @@ a:hover {
 }
 
 a.more {
-  color: #fda056;
+  color: #ca2f37;
 }
 
 a:hover.more {
@@ -131,7 +133,7 @@ img {
 	float:left;
 }
 .blue{
-  color:#fda056;
+  color:#ca2f37;
 }
 
 .blue2{
@@ -139,7 +141,7 @@ img {
 }
 
 .blue-dark{
-  color:#fb8865;
+  color:#bd0007;
 }
 
 .bold {
@@ -292,7 +294,12 @@ header {
 
 .logo {
   position:relative;
-  margin-top:54px;
+  margin-top:0px;
+  text-align: center;
+}
+
+.logo > img {
+  size: 150x150 !important;
 }
 
 .head-info {
@@ -358,11 +365,11 @@ header {
 
 			#nav > ul
 			{
-				background-color: #e15a1f;
+				background-color: #b50009;
 			}
 				#nav > ul > li
 				{
-					width: 25%;
+					width: 20%;
 					height: 100%;
 					float: left;
 				}
@@ -375,12 +382,12 @@ header {
 					}
 						#nav > ul > li:not( :last-child ) > a
 						{
-							border-right: 1px solid #cc470d;
+							border-right: 1px solid #e30713;
 						}
 						#nav > ul > li:hover > a,
 						#nav > ul:not( :hover ) > li.active > a
 						{
-							background-color: #cc470d;
+							background-color: #e30713;
 						}
 
 
@@ -388,7 +395,7 @@ header {
 
 				#nav li ul
 				{
-					background-color: #cc470d;
+					background-color: #e30713;
 					display: none;
 					position: absolute;
 					top: 100%;
@@ -407,13 +414,13 @@ header {
 						}
 						#nav li ul a
 						{
-							border-top: 1px solid #e15a1f;
+							border-top: 1px solid #b50009;
 							padding: 5px; /* 15 (20) */
 						}
 							#nav li ul li a:hover,
 							#nav li ul:not( :hover ) li.active a
 							{
-								background-color: #e15a1f;
+								background-color: #b50009;
 							}
 
 
@@ -449,7 +456,7 @@ header {
 					height: 3.125em; /* 50 */
 					text-align: left;
 					text-indent: -9999px;
-					background-color: #e15a1f;
+					background-color: #b50009;
 					position: relative;
 				}
 					#nav > a:before,
@@ -502,7 +509,7 @@ header {
 						#nav > ul > li:not( :last-child ) > a
 						{
 							border-right: none;
-							border-bottom: 1px solid #cc470d;
+							border-bottom: 1px solid #e30713;
 						}
 
 
@@ -536,7 +543,7 @@ header {
 }
 
 .ic-1 span {
-  color:#fb8865;
+  color:#bd0007;
 }
    
 .title-1 {
@@ -649,7 +656,7 @@ header {
 }
 
 .list-b i {
-  color:#fb8865;
+  color:#bd0007;
   padding-right:4px;
 }
 
@@ -683,7 +690,7 @@ header {
   color:#FFF;
   border:0px;
   padding:30px;
-  background:#fb8865;
+  background:#bd0007;
 }
 
 .client-says:after {
@@ -694,7 +701,7 @@ header {
 	left: 40px;
 	bottom: -24px;
 	border: 12px solid;
-	border-color: #fb8865 transparent transparent #fb8865;
+	border-color: #bd0007 transparent transparent #bd0007;
 }
 
 .client-says-2 {
@@ -722,7 +729,7 @@ header {
 .progress {
   height:35px;
   border-radius:0px;
-  background: #fda056 !important; 
+  background: #ca2f37 !important; 
   -webkit-box-shadow:rgba(0, 0, 0, 0) 0 0 0 inset;
   margin-bottom:8px;
 }
@@ -730,7 +737,7 @@ header {
 .bar {
   height:35px;
   line-height:35px;
-  background:#fb8865 !important;
+  background:#bd0007 !important;
   border:0px;
   -webkit-box-shadow:rgba(0, 0, 0, 0) 0 0 0 inset;
   text-shadow: none !important;
@@ -744,7 +751,7 @@ header {
   
 .btn {
   color:#fff;
-  background:#fb8865;
+  background:#bd0007;
   height:32px;
   line-height:32px;
   padding:0px 22px;
@@ -760,11 +767,11 @@ header {
 }
 .btn:hover {
   color:#fff;
-  background:#fda056;
+  background:#ca2f37;
 }
 
 .btn-blue {
-  background:#fda056;
+  background:#ca2f37;
 } 
 
 .btn-blue:hover {
@@ -776,7 +783,7 @@ header {
 } 
 
 .btn-gray:hover {
-  background:#fda056;
+  background:#ca2f37;
 } 
 
 .btn-checkbox {
@@ -833,7 +840,7 @@ header {
 }
 
 .nav-tabs li a:hover {
-  background:#fb8865;
+  background:#bd0007;
 }
 
 .tab-content {
@@ -941,11 +948,11 @@ td.w-5 {
 }
 
 tr.odd {
-  background:#fb8865;
+  background:#ff474e;
 }
 
 tr.even {
-  background:#fda056;
+  background:#ca2f37;
 }
 
 table a:hover{
@@ -986,7 +993,7 @@ td.unpaid {
 }
 
 #ajaxsuccess {
-	color: #fda056;
+	color: #ca2f37;
   font-size:18px;
   font-weight:bold;
 	width: 100%;
@@ -1011,7 +1018,7 @@ td.unpaid {
   text-align:center;
   font-size:13px;
   color:#fff;
-  background:#fda056;
+  background:#ca2f37;
   float:right;
   margin-bottom:5px;
   margin-right:1px;
@@ -1029,7 +1036,7 @@ td.unpaid {
 
 .blog-icon {
   font-size:30px;
-  color:#fb8865;
+  color:#bd0007;
   width:30px;
   height:30px;
 }
@@ -1111,7 +1118,7 @@ td.unpaid {
 .pricing-tables th {
   font-size:16px;
   font-weight:bold;
-  background:#fda056;
+  background:#ca2f37;
   text-align:center;
   padding: 30px !important;
 }
@@ -1147,23 +1154,23 @@ td.unpaid {
 .pricing-tables .table-footer {
   font-size:16px;
   color:#fff !important;
-  background:#fda056 !important;
+  background:#ca2f37 !important;
   padding:44px 0px !important;
   border:0px !important;
 }
 
 .pricing-tables .active th, .pricing-tables .active .table-footer {
   color:#fff;
-  background:#fb8865 !important;
+  background:#bd0007 !important;
 }
 
 .pricing-tables .active td {
-  color:#fda056;
+  color:#ca2f37;
 }
 
 .pricing-tables .active .table-footer {
   border:0px;
-  background:#fb8865 !important;
+  background:#bd0007 !important;
 }
 
 /* --------------------------------------------------------	*/
@@ -1194,7 +1201,7 @@ td.unpaid {
     width:80%;
     height:34px;
     color:#fff;
-    background:#fb8865;
+    background:#bd0007;
     border:0px;
     padding-left:5%;
     padding-right:15%;
@@ -1231,7 +1238,7 @@ td.unpaid {
     height:20px;
     font-size:13px;
     color:#fff;
-    background:#fda056;
+    background:#ca2f37;
     padding:5px 13px 4px 13px;
     margin-right:10px;
     margin-bottom:10px;
@@ -1239,7 +1246,7 @@ td.unpaid {
   }
   
   .tag:hover {
-    background:#fb8865;
+    background:#bd0007;
   }
 
 /* --------------------------------------------------------	*/
@@ -1247,7 +1254,7 @@ td.unpaid {
 /* --------------------------------------------------------	*/
 
 .testimonials {
-  background:#fb8865;
+  background:#bd0007;
   border:1px solid #3b3b3b;
   padding:30px; 
 }
@@ -1307,7 +1314,7 @@ td.unpaid {
     margin:0px;
     border:0px;
   	color:#fff;
-	background: #fda056;
+	background: #ca2f37;
   }
  
   #portfolio-filter li:hover a {
@@ -1318,7 +1325,7 @@ td.unpaid {
     
   #portfolio-filter li.active a {
     color:#fff;
-    background: #fb8865;
+    background: #bd0007;
   }
 
 	/* --------------------------------------------------------	*/
@@ -1585,3 +1592,64 @@ td.unpaid {
 .social-network.yelp:hover,.active .social-network.yelp{ background-position: -1104px -24px}
 .social-network.youtube:hover,.active .social-network.youtube{ background-position: -1128px -24px}
 .social-network.zerply:hover,.active .social-network.zerply{ background-position: -1152px -24px}
+
+
+.bs-callout {
+    padding: 0px 10px 10px 10px;
+    margin: 0px 0px 20px 0px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 3px;
+    margin-bottom: 0px;
+    padding: 5px 0;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 20px;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-primary {
+    border-left-color: #428bca;
+}
+.bs-callout-primary h4 {
+    color: #428bca;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4 {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4 {
+    color: #d9534f;
+}
+.bs-callout-warning {
+    border-left-color: #f0ad4e;
+}
+.bs-callout-warning h4 {
+    color: #f0ad4e;
+}
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+.bs-callout-info h4 {
+    color: #5bc0de;
+}
