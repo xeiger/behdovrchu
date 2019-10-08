@@ -1,5 +1,5 @@
 Dobrý den,<%= "\r\n" -%>
-obdrželi jsme Vaši přihlášku<%= "\r\n" %>
+obdrželi jsme Vaši přihlášku ze dne <%= @entrant.created_at.strftime('%d.%m.%Y %H:%M') %><%= "\r\n" %>
 Jméno a příjmení: <%= @entrant.to_s %><%= "\r\n" %>
 Rok narození: <%= @entrant.year %><%= "\r\n" %>
 <% unless @entrant.club.blank? %>
