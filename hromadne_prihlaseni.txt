@@ -1,7 +1,7 @@
 first_name, surname, club, address, email, variable_symbol, year, male, climber
 
 *********************************
-PETR DASEK - 0000020001 - 3000,-
+PETR DASEK - 0000020001 - 2550,-
 Entrant.create!(surname: "Latečka", first_name: "Roman", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112101", year: 1983, male: true, climber: true)
 Entrant.create!(surname: "Bolcková", first_name: "Monika", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112102", year: 1984, male: false, climber: true)
 Entrant.create!(surname: "Ďásek", first_name: "Petr", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112103", year: 1963, male: true, climber: true)
@@ -19,4 +19,3 @@ Entrant.create!(surname: "Urbaník", first_name: "Petr", club: "příznivec HO S
 Entrant.create!(surname: "Ďásek", first_name: "Karel", club: "příznivec HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112115", year: 1992, male: true, climber: false)
 Entrant.create!(surname: "Růžička", first_name: "Adam", club: "příznivec HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112116", year: 1990, male: true, climber: false)
 Entrant.create!(surname: "Stecker", first_name: "Marek", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112117", year: 1974, male: true, climber: true)
-
