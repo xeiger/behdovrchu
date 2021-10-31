@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-12">
         <h2>Přihláška</h2>
-<% if true #Entrant.where(archived: false).count >= 349 %>
+<% if false #Entrant.where(archived: false).count >= 349 %>
         <ul class="list-a">
           <li>
             Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, můžete se ještě přihlásit v den závodu při prezenci.
@@ -114,7 +114,7 @@
               Pole označená hvězdičkou (*) jsou povinná!
             </div>
             <div class="col-md-8">
-              <%= button_tag( :class => "btn btn-info f-right") do %>
+              <%= button_tag( :class => "btn f-right") do %>
                 Přihlásit
               <% end %>
             </div>

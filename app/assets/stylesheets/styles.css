@@ -1,4 +1,4 @@
-/*#e30713
+/*#0D90AA
 
 /* --------------------------------------------------------	*/
 /*	Twitter Bootstrap */
@@ -111,11 +111,11 @@ a:hover {
 }
 
 a.more {
-  color: #ca2f37;
+  color: #00AAB0;
 }
 
 a:hover.more {
-  color: #83adff;
+  color: #22C3A9;
 }
 
 img {
@@ -344,7 +344,7 @@ header {
 				}
 				#nav li a:active
 				{
-					background-color: #c00 !important;
+					background-color: #0D90AA !important;
 				}
 
 			#nav span:after
@@ -365,7 +365,7 @@ header {
 
 			#nav > ul
 			{
-				background-color: #b50009;
+				background-color: #334A51;
 			}
 				#nav > ul > li
 				{
@@ -382,12 +382,12 @@ header {
 					}
 						#nav > ul > li:not( :last-child ) > a
 						{
-							border-right: 1px solid #e30713;
+							border-right: 1px solid #0D90AA;
 						}
 						#nav > ul > li:hover > a,
 						#nav > ul:not( :hover ) > li.active > a
 						{
-							background-color: #e30713;
+							background-color: #0D90AA;
 						}
 
 
@@ -395,7 +395,7 @@ header {
 
 				#nav li ul
 				{
-					background-color: #e30713;
+					background-color: #0D90AA;
 					display: none;
 					position: absolute;
 					top: 100%;
@@ -414,13 +414,13 @@ header {
 						}
 						#nav li ul a
 						{
-							border-top: 1px solid #b50009;
+							border-top: 1px solid #334A51;
 							padding: 5px; /* 15 (20) */
 						}
 							#nav li ul li a:hover,
 							#nav li ul:not( :hover ) li.active a
 							{
-								background-color: #b50009;
+								background-color: #334A51;
 							}
 
 
@@ -456,7 +456,7 @@ header {
 					height: 3.125em; /* 50 */
 					text-align: left;
 					text-indent: -9999px;
-					background-color: #b50009;
+					background-color: #334A51;
 					position: relative;
 				}
 					#nav > a:before,
@@ -509,7 +509,7 @@ header {
 						#nav > ul > li:not( :last-child ) > a
 						{
 							border-right: none;
-							border-bottom: 1px solid #e30713;
+							border-bottom: 1px solid #0D90AA;
 						}
 
 
@@ -543,7 +543,7 @@ header {
 }
 
 .ic-1 span {
-  color:#bd0007;
+  color:#00AAB0;
 }
    
 .title-1 {
@@ -647,7 +647,8 @@ header {
   list-style:none;
   padding-left:30px;
   margin-bottom:15px;
-  background: url('/assets/arrow4.png') left center no-repeat;
+  background: url('/assets/arrow4-2.png') left center no-repeat;
+
 }
 
 .list-b li {
@@ -751,7 +752,7 @@ header {
   
 .btn {
   color:#fff;
-  background:#bd0007;
+  background:#0D90AA;
   height:32px;
   line-height:32px;
   padding:0px 22px;
@@ -767,7 +768,7 @@ header {
 }
 .btn:hover {
   color:#fff;
-  background:#ca2f37;
+  background:#22C3A9;
 }
 
 .btn-blue {
@@ -840,7 +841,7 @@ header {
 }
 
 .nav-tabs li a:hover {
-  background:#bd0007;
+  background:#22C3A9;
 }
 
 .tab-content {
@@ -948,11 +949,11 @@ td.w-5 {
 }
 
 tr.odd {
-  background:#ff474e;
+  background:#22C3A9;
 }
 
 tr.even {
-  background:#ca2f37;
+  background:#00AAB0;
 }
 
 table a:hover{
@@ -1435,7 +1436,7 @@ td.unpaid {
 }
 
 #footer a:hover, #footer a.white:hover {
-  color:#83adff;
+  color:#22C3A9;
   text-decoration:none;       
 }
 
@@ -1636,10 +1637,10 @@ td.unpaid {
     color: #5cb85c;
 }
 .bs-callout-danger {
-    border-left-color: #d9534f;
+    border-left-color: #0D90AA;
 }
 .bs-callout-danger h4 {
-    color: #d9534f;
+    color: #0D90AA;
 }
 .bs-callout-warning {
     border-left-color: #f0ad4e;
