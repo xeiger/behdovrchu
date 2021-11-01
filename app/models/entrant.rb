@@ -4,7 +4,7 @@ class Entrant < ActiveRecord::Base
 
   validates :email, :format => {:with => /\A^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,4})$\z/}
   validates :variable_symbol, uniqueness: true
-  validates :year, numericality: {only_integer: true, greater_than_or_equal_to: 1900, less_than_or_equal_to: 2009}
+  validates :year, numericality: {only_integer: true, greater_than_or_equal_to: 1900, less_than_or_equal_to: 2012}
 
   before_validation :generate_vs, on: :create
   after_create :send_email
