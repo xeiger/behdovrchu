@@ -1,5 +1,9 @@
 Dobrý den,<br><br>
 obdrželi jsme Vaši přihlášku ze dne <b><%= @entrant.created_at.strftime('%d.%m.%Y %H:%M') %></b><br><br>
+
+<b>Důležité informace vzhledem k pandemické situaci:</b><br>
+Vzhledem ke zpřísněným protiepidemickým opatřením jsme aktuálně nuceni zavést jistá omezení, které nás netěší: <b>při prezenci budeme kontrolovat bezinfekčnost závodníků</b>. Pro start v závodě je tedy nutné doložit ukončené očkování nebo prodělanou nemoc Covid v posledních 6 měsících, příp. pokud někdo nemá dokončený proces očkování (má jen první dávku, nebo ještě neuplynulo 14 dní od poslední), tak v těchto případech je možné se prokázat negativním výsledkem PCR testu. Z toho také vylpývá, že každý závodník si bude muset startovní balíček a tričko vyzvednout osobně. <b>Závodníci, kteří výše popsané podmínky nebudou moci splnit, nemůžeme pustit ke startu</b>.<br><br>
+
 Jméno a příjmení: <b><%= @entrant.to_s %></b><br>
 Rok narození: <b><%= @entrant.year %></b><br>
 <% unless @entrant.club.blank? %>

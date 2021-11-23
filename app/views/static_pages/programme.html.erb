@@ -5,7 +5,7 @@
   data << {key: 'Datum konání', value: '<b>sobota 4.12.2021</b>'}
   data << {key: 'Start závodu', value: '12:00, hromadný'}
   data << {key: 'Trať závodu', value: '<b>Beží se od Hotelu Ráztoka po Knížecí cestě do prostoru horní stanice lanové dráhy. Délka trati je 5700&nbsp;m, převýšení je 400&nbsp;m.</b>'}
-  data << {key: 'Prezentace', value: 'Probíhá v den závodu před Hotelem Ráztoka a to od 9:00 do 11:00.'}
+  data << {key: 'Prezence', value: 'Probíhá v den závodu před Hotelem Ráztoka a to od 9:00 do 11:00.'}
   data << {key: 'Startovné', value: 'Při přihlášení a zaplacení předem <b>200 Kč</b> (platba musí přijít na účet do <b>1.12.2021</b> včetně), po tomto termínu a&nbsp;v&nbsp;den závodu <b>250 Kč</b>.'}
   data << {key: 'Přihlášky', value: "Přihlašujte se prostřednictvím <a href=#{new_entrant_path}>webového formuláře</a>. Po odeslání formuláře obdržíte email s platebními údaji. (Máte-li zájem o hromadnou přihlášku, kontaktujte nás prosím emailem.)"}
 
@@ -13,7 +13,7 @@
   data_small << {key: 'Datum konání', value: '<b>sobota 4.12.2021</b>'}
   data_small << {key: 'Start závodu', value: '10:00, hromadný'}
   data_small << {key: 'Trať závodu', value: 'Beží se od Hotelu Ráztoka ke spodní stanici lanové dráhy. Délka trati je 600m.'}
-  data_small << {key: 'Prezentace', value: 'Probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'}
+  data_small << {key: 'Prezence', value: 'Probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'}
   data_small << {key: 'Startovné', value: 'Dětský závod je bez startovného.'}
   data_small << {key: 'Přihlášky', value: 'Přihlašuje se na místě v den závodu při prezentaci. V případě, že se chystáte přijet s větší skupinou dětí, dejte nám, prosím, vědět na náš email.'}
 %>
@@ -25,6 +25,9 @@
     <!-- Hlavni zavod -->
     <div class="row">
       <div class="col-md-12">
+
+        <%= render 'partials/covid' %>
+
         <h2>Hlavní závod</h2>
 
         <div class="row">
@@ -107,7 +110,6 @@
               <li>Každý <b>předem přihlášený</b> závodník obdrží při prezentaci tradiční tričko (při přihlášení na místě pouze do vydání zásob)</li>
               <li><b>Startovní číslo musí být umístěno viditelně na prsou</b></li>
               <li>Pro závodníky bude zajištěn vývoz oblečení na Pustevny</li>
-              <li>Pro závodníky bude zajištěn svoz lanovkou do Ráztoky</li>
               <li>V cíli bude pro závodníky zajištěn čaj</li>
               <li>Vyhlášení závodu bude probíhat na Pustevnách v prostoru cíle přibližně ve 14:00</li>
               <li>Parkování aut je možné na veřejných parkovištích v Ráztoce</li>
