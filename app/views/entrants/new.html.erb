@@ -8,124 +8,135 @@
     <div class="row">
       <div class="col-md-12">
         
-        <%= render 'partials/covid' %>
-
-<% if false #Entrant.where(archived: false).count >= 349 %>
+        <%#= render 'partials/covid' %>
 
         <h2>Přihláška</h2>
-        <ul class="list-a">
-          <li>
-            Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, můžete se ještě přihlásit v den závodu při prezenci.
-          </li>
-        </ul>
 
+        <% if Entrant.where(archived: false).count >= 299 %>
 
-        <ul class="list-a">
-          <li>
-            V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
-          </li>
-          <li>
-            V případě, že Vám do jednoho dne od přihlášení nepřijde e-mail s informacemi k zaplacení startovného, prosíme, kontaktujte nás na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
-          </li>
-        </ul>
-        <div class="space20"></div> 
+          <ul class="list-a">
+            <li>
+              Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, můžete se ještě přihlásit v den závodu při prezenci.
+            </li>
+          </ul>
 
-        <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
+        <% elsif true %>
 
-        <%= form_for @entrant, :html=>{:class=>'form form-comment'} do |f| %>
+          <ul class="list-a">
+            <li>
+              Během příštího týdne spustíme registraci do závodu.
+            </li>
+          </ul>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Jméno *</label>
-                <%= f.text_field :first_name, class: "form-control" %>
+        <% else %>
+
+          <ul class="list-a">
+            <li>
+              V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
+            </li>
+            <li>
+              V případě, že Vám do jednoho dne od přihlášení nepřijde e-mail s informacemi k zaplacení startovného, prosíme, kontaktujte nás na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
+            </li>
+          </ul>
+          <div class="space20"></div> 
+
+          <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
+
+          <%= form_for @entrant, :html=>{:class=>'form form-comment'} do |f| %>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Jméno *</label>
+                  <%= f.text_field :first_name, class: "form-control" %>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Příjmení *</label>
+                  <%= f.text_field :surname, class: "form-control" %>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Příjmení *</label>
-                <%= f.text_field :surname, class: "form-control" %>
-              </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Email *</label>
-                <%= f.text_field :email, class: "form-control" %>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Email *</label>
+                  <%= f.text_field :email, class: "form-control" %>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Rok narození *</label>
+                  <%= f.text_field :year, class: "form-control" %>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Rok narození *</label>
-                <%= f.text_field :year, class: "form-control" %>
-              </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Muž / Žena *</label>
-                <div style="margin-top: 10px">
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.male %>">
-                      <%= f.radio_button :male, "1", checked: @entrant.male %> Muž
-                    </label>
-                    <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.male %>">
-                      <%= f.radio_button :male, "0", checked: !@entrant.male %> Žena
-                    </label>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Muž / Žena *</label>
+                  <div style="margin-top: 10px">
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.male %>">
+                        <%= f.radio_button :male, "1", checked: @entrant.male %> Muž
+                      </label>
+                      <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.male %>">
+                        <%= f.radio_button :male, "0", checked: !@entrant.male %> Žena
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Jste členem horolezeckého oddílu? *</label>
+                  <div style="margin-top: 10px">
+                    <div class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.climber %>">
+                        <%= f.radio_button :climber, "1", checked: @entrant.climber %> Ano
+                      </label>
+                      <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.climber %>">
+                        <%= f.radio_button :climber, "0", checked: !@entrant.climber %> Ne
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Jste členem horolezeckého oddílu? *</label>
-                <div style="margin-top: 10px">
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.climber %>">
-                      <%= f.radio_button :climber, "1", checked: @entrant.climber %> Ano
-                    </label>
-                    <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.climber %>">
-                      <%= f.radio_button :climber, "0", checked: !@entrant.climber %> Ne
-                    </label>
-                  </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Oddíl</label>
+                  <%= f.text_field :club, class: "form-control" %>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Adresa</label>
+                  <%= f.text_field :address, class: "form-control" %>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Oddíl</label>
-                <%= f.text_field :club, class: "form-control" %>
+
+            <div class="row">
+              <div class="col-md-4">
+                Pole označená hvězdičkou (*) jsou povinná!
+              </div>
+              <div class="col-md-8">
+                <%= button_tag( :class => "btn f-right") do %>
+                  Přihlásit
+                <% end %>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>Adresa</label>
-                <%= f.text_field :address, class: "form-control" %>
-              </div>
-            </div>
-          </div>
 
+          <% end %>
 
-          <div class="row">
-            <div class="col-md-4">
-              Pole označená hvězdičkou (*) jsou povinná!
-            </div>
-            <div class="col-md-8">
-              <%= button_tag( :class => "btn f-right") do %>
-                Přihlásit
-              <% end %>
-            </div>
-          </div>
-
-        <% end %>
-<% end %>
+      <% end %>
       </div>
     </div>
     <div class="space50"></div> 
