@@ -1,0 +1,19 @@
+*********************************
+PETR SIMICEK - 0000112201 - 1800,-
+Entrant.create!(surname: "Harabiš", first_name: "David", club: "SDH Mniší", email: "david-harabis@seznam.cz", variable_symbol: "0000112201", year: 2001, male: true, climber: false)
+Entrant.create!(surname: "Marak", first_name: "Matěj", club: "SDH Mniší", email: "matejmarak92@seznam.cz", variable_symbol: "0000112202", year: 2001, male: true, climber: false)
+Entrant.create!(surname: "Zabenský", first_name: "Stanislav", club: "SDH Mniší", email: "zabensky.stanislav@gmail.com", variable_symbol: "0000112203", year: 1991, male: true, climber: false)
+Entrant.create!(surname: "Marak", first_name: "Ondřej", club: "SDH Mniší", email: "ondrej.marak@gmail.com", variable_symbol: "0000112204", year: 1991, male: true, climber: false)
+Entrant.create!(surname: "Holub", first_name: "Štěpán", club: "SDH Mniší", email: "stepyh@gmail.com", variable_symbol: "0000112205", year: 1981, male: true, climber: false)
+Entrant.create!(surname: "Holub", first_name: "Svatopluk", club: "SDH Mniší", email: "svatopluk.holub@email.cz", variable_symbol: "0000112206", year: 1977, male: true, climber: false)
+Entrant.create!(surname: "Marak", first_name: "Jakub", club: "SDH Mniší", email: "jakub.marak@gmail.com", variable_symbol: "0000112207", year: 1994, male: true, climber: false)
+Entrant.create!(surname: "Černošek", first_name: "Tomáš", club: "SDH Mniší", email: "cernosek6@seznam.cz", variable_symbol: "0000112208", year: 1994, male: true, climber: false)
+Entrant.create!(surname: "Šimíček", first_name: "Petr", club: "SDH Mniší", email: "simicekp93@gmail.com", variable_symbol: "0000112209", year: 1979, male: true, climber: false)
+
+*********************************
+PETR DASEK - 0000112501 - 1000,-
+Entrant.create!(surname: "Siročák", first_name: "Petr", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112501", year: 1978, male: true, climber: true)
+Entrant.create!(surname: "Klimánek", first_name: "Lukáš", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112502", year: 1979, male: true, climber: true)
+Entrant.create!(surname: "Fukalová", first_name: "Radka", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112503", year: 1970, male: false, climber: true)
+Entrant.create!(surname: "Mareš", first_name: "Petr", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112504", year: 1979, male: true, climber: true)
+Entrant.create!(surname: "Šustek", first_name: "Pavel", club: "HO START Ostrava", email: "petr.dasek@portaflex.cz", variable_symbol: "0000112505", year: 1979, male: true, climber: true)

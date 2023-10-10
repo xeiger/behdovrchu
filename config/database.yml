@@ -4,8 +4,8 @@ development:
   database: behdovrchu_development
   pool: 5
   username: postgres
-  password: 
-  host: localhost
+  password: Janek
+  host: 127.0.0.1
 
 test:
   adapter: postgresql
@@ -13,7 +13,8 @@ test:
   database: behdovrchu_test
   pool: 5
   username: postgres
-  password: 
+  password: Janek
+  host: 127.0.0.1
 
 production:
   adapter: postgresql
