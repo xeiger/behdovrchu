@@ -17,6 +17,29 @@ class Entrant < ActiveRecord::Base
     "#{self.first_name} #{self.surname}"
   end
 
+  def email
+    "
+Dobrý den,
+obdrželi jsme Vaši přihlášku ze dne #{self.created_at.strftime('%d.%m.%Y %H:%M')}
+
+Jméno a příjmení: #{ self.to_s }
+Rok narození: #{ self.year }
+Oddíl: #{ self.club.to_s }
+Adresa: #{ self.address.to_s }
+
+Zasíláme Vám informace k zaplacení startovného:
+Číslo účtu: 1444871012/3030
+Variabilní symbol: #{ self.variable_symbol }
+Částka: 250 Kč
+
+Připsání peněz na náš účet si můžete zkontrolovat na našem webu.
+
+Děkujeme a přejeme kvalitní trénink.
+Tým BeskydSki
+www.beskydski.cz
+"
+  end
+
   private
 
   def generate_vs
