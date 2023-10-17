@@ -10,7 +10,7 @@ class EntrantsController < ApplicationController
     @entrant = Entrant.new(entrant_params)
 
     if Entrant.where(archived: false).count < 300 and @entrant.save
-      flash[:notice] = "Vaše přihláška byla přijata, v emailu najdete informace k zaplacení startovného."
+      flash[:notice] = "Vaše přihláška byla přijata. Během jednoho dne Vám dorazí email, ve kterém najdete informace k zaplacení startovného."
       redirect_to entrants_path
     else
       render action: 'new'
