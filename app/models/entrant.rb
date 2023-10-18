@@ -17,7 +17,7 @@ class Entrant < ActiveRecord::Base
     "#{self.first_name} #{self.surname}"
   end
 
-  def email
+  def email_str
     str = <<-EOF
 Dobrý den,
 obdrželi jsme Vaši přihlášku ze dne #{self.created_at.try(:strftime, '%d.%m.%Y %H:%M')}
