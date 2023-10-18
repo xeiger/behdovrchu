@@ -18,9 +18,9 @@ class Entrant < ActiveRecord::Base
   end
 
   def email
-    "
+    str = <<-EOF
 Dobrý den,
-obdrželi jsme Vaši přihlášku ze dne #{self.created_at.strftime('%d.%m.%Y %H:%M')}
+obdrželi jsme Vaši přihlášku ze dne #{self.created_at.try(:strftime, '%d.%m.%Y %H:%M')}
 
 Jméno a příjmení: #{ self.to_s }
 Rok narození: #{ self.year }
@@ -37,7 +37,8 @@ Připsání peněz na náš účet si můžete zkontrolovat na našem webu.
 Děkujeme a přejeme kvalitní trénink.
 Tým BeskydSki
 www.beskydski.cz
-"
+EOF
+    return str
   end
 
   private
