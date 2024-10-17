@@ -4,7 +4,7 @@ class EntrantMailer < ActionMailer::Base
   def registration(entrant)
     @subject = "BĚH DO VRCHU - Informace k platbě startovného "
     @to = entrant.to_mail
-    #@bcc = 'behdovrchu@email.cz'
+    @bcc = 'behdovrchu@email.cz'
     @entrant = entrant
 
     mail(to: @to, subject: @subject, bcc: @bcc)
