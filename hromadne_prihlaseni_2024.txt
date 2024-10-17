@@ -1,0 +1,5 @@
+first_name, surname, club, address, email, variable_symbol, year, male, climber
+
+*********************************
+TEST
+Entrant.create!(surname: "Jan", first_name: "Schwarz", club: "BeskydSki", email: "eiger@centrum.cz", variable_symbol: "1100112710", year: 1979, male: true, climber: true)
