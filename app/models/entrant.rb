@@ -36,7 +36,7 @@ Připsání peněz na náš účet si můžete zkontrolovat na našem webu.
 
 Děkujeme a přejeme kvalitní trénink.
 Tým BeskydSki
-www.beskydski.cz
+https://behdovrchu.herokuapp.com/
 EOF
     return str
   end
