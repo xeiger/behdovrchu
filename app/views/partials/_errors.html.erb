@@ -1,26 +1,12 @@
 <% errors = object.errors.full_messages.uniq %>
-<% m = object.class.to_s.downcase %>
-
 <% if errors.any? %>
-
-<div class="row">
-  <div class="col-md-12">
-
-    <div class="alert alert-error">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      
-      <strong>Nelze přihlásit:</strong>
-      <ul>
-        <% errors.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      
-      </ul>
-    </div>
-
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong><i class="bi bi-exclamation-triangle-fill me-1"></i>Nelze přihlásit:</strong>
+    <ul class="mb-0 mt-1">
+      <% errors.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Zavřít"></button>
   </div>
-</div>
-
-<div class="space20"></div> 
-
 <% end %>

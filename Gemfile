@@ -7,10 +7,6 @@ gem 'pg'
 gem 'bootsnap', require: false
 gem 'puma', '~> 6.0'
 
-gem 'sassc-rails'
-gem 'uglifier', '>= 1.3.0'
-gem 'twitter-bootstrap-rails'
-gem "bootstrap-switch-rails"
 gem 'sprockets-rails', '~> 3.4'
 # Use CoffeeScript for .coffee assets and views
 #gem 'coffee-rails', '~> 4.1.0'
@@ -18,9 +14,7 @@ gem 'sprockets-rails', '~> 3.4'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.

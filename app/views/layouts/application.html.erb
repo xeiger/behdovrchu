@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Behdovrchu</title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= [yield(:page_title).presence, 'Běh do vrchu Ráztoka – Pustevny'].compact.join(' | ') %></title>
+    <meta name="description" content="Tradiční běžecký závod do vrchu od Hotelu Ráztoka na Pustevny. <%= RACE[:edition] %>. ročník se běží v sobotu <%= short_date(RACE[:date]) %>.">
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body>
+    <%= render 'partials/navbar' %>
 
-    <!-- Header -->
-    <header id="header">
-      <div class="container">
-        <div class="row t-container">
+    <main>
+      <%= yield :hero %>
+      <% if content_for?(:page_title) %>
+        <%= render 'partials/page_header', title: yield(:page_title) %>
+      <% end %>
+      <%= yield %>
+    </main>
 
-          <!-- Logo -->
-          <div class="col-md-2" style="padding-right: 0px;">
-            <div class="logo">
-              <%= link_to home_page_path do %>
-                <%= image_tag 'logo.png' %>
-              <% end %>
-            </div>
-          </div>
+    <%= render 'partials/footer' %>
 
-          <%= render :partial => 'partials/menu' %> 
-
-      </div> 
-    </header>
-    <!-- Header End -->
-
-    <%= yield %>
-
-    <%= render :partial => 'partials/footer' %> 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   </body>
-
 </html>

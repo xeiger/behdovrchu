@@ -1,29 +1,31 @@
-<!-- Footer -->
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3>Kontakt</h3>
-          BeskydSki, spolek<br>
-          <i class="fa fa-envelope" style="margin-right: 10px;"></i><a href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a><br>
-          <i class="fa fa-home" style="margin-right: 10px;"></i></span><a href="https://behdovrchu.herokuapp.com/" target="_blank">behdovrchu.herokuapp.com</a><br>
-          <i class="fa fa-facebook-square" style="margin-right: 10px;"></i><a href="https://www.facebook.com/BehDoVrchu/" target="_blank">facebook - BehDoVrchu</a><br>
-
-        </div>
+<footer class="bdv-footer">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-5">
+        <h2>Kontakt</h2>
+        <p class="mb-2">BeskydSki, spolek</p>
+        <ul class="bdv-footer-links">
+          <li><i class="bi bi-envelope"></i><a href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a></li>
+          <li><i class="bi bi-globe2"></i><a href="https://behdovrchu.herokuapp.com/">behdovrchu.herokuapp.com</a></li>
+          <li><i class="bi bi-facebook"></i><a href="https://www.facebook.com/BehDoVrchu/" target="_blank" rel="noopener">facebook – BehDoVrchu</a></li>
+        </ul>
       </div>
-      
-      <div class="row space20"></div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="logo-footer">
-            Design by <a href="#">xEiger</a>
-          </div>                       
-        </div>
-        <div class="col-md-6 right">
-          &copy; 2023. Všechna práva vyhrazena.
-        </div>
+      <div class="col-md-4">
+        <h2>Závod</h2>
+        <ul class="bdv-footer-links">
+          <% nav_items.each do |label, path, _| %>
+            <li><i class="bi bi-chevron-right"></i><%= link_to label, path %></li>
+          <% end %>
+        </ul>
       </div>
-
+      <div class="col-md-3">
+        <h2><%= RACE[:edition] %>. ročník</h2>
+        <p class="mb-0">sobota <%= short_date(RACE[:date]) %><br>Hotel Ráztoka – Pustevny<br>start 12:00</p>
+      </div>
     </div>
-  </footer>
-  <!-- Footer End -->
+    <div class="bdv-footer-bottom d-flex flex-column flex-sm-row justify-content-between gap-1">
+      <span>Design by xEiger</span>
+      <span>&copy; <%= Date.today.year %> BeskydSki. Všechna práva vyhrazena.</span>
+    </div>
+  </div>
+</footer>

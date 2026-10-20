@@ -18,3 +18,5 @@
 
 # own ignore files
 .rvmrc
+# prekompilovane assety - kompiluje Heroku pri deployi
+/public/assets

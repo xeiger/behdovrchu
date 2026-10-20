@@ -1,145 +1,69 @@
-<%= render :partial => 'partials/titlebar', locals: {title: 'Galerie'} %>
+<% content_for :page_title, 'Galerie' %>
+<%
+  albums = [
+    [2024, [
+      ['Fotky Zdenka Holomého', 'https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2024'],
+      ['Fotky Jarka Balcara', 'https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2024-ii'],
+      ['Fotky pana Rašky I', 'https://www.rajce.idnes.cz/starochlc/album/beh-do-vrchu-raztoka-pustevny-2024'],
+      ['Fotky pana Rašky II', 'https://www.rajce.idnes.cz/starochlc/album/beh-do-vrchu-raztoka-pustevny-5-km-2024-zr'],
+    ]],
+    [2023, [
+      ['Fotky Zdenka Holomého', 'https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchnu-2023'],
+      ['Fotky Jarka Balcara', 'https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2023-ii'],
+      ['Fotky Petry Schwarzové Žallmannové', 'https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2023-iii'],
+      ['Fotky pana Rašky', 'https://www.rajce.idnes.cz/sk-zafar-frenstat-p-r/album/zavod-do-vrchu-raztoka-pustevny-2023'],
+    ]],
+    [2022, [
+      ['Fotky Zdenka Holomého', 'https://beskydski.rajce.idnes.cz/Beh_do_vrchu_2022/'],
+      ['Fotky organizátorů', 'https://beskydski.rajce.idnes.cz/Beh_do_vrchu_2022_II/'],
+    ]],
+    [2018, [
+      ['Fotky Zdenka Holomého', 'https://beskydski.rajce.idnes.cz/bdv2018_foto_I/'],
+      ['Fotky Jarka Balcara', 'https://beskydski.rajce.idnes.cz/bdv2018_foto_II/'],
+      ['Fotky pana Rašky', 'https://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_do_vrchu_Raztoka_-_Pustevny_2018_ZR_FR/'],
+      ['Fotky Tomáše Popa', 'https://www.zonerama.com/tomaspop/Album/4893348'],
+    ]],
+    [2017, [
+      ['Fotky Petry Žallmannové I', 'http://beskydski.rajce.idnes.cz/bdv2017_fotograf_1/'],
+      ['Fotky Petry Žallmannové II', 'http://beskydski.rajce.idnes.cz/bdv2017_fotograf_2/'],
+      ['Fotky Honzy Balcara', 'http://beskydski.rajce.idnes.cz/bdv2017_fotograf_3/'],
+      ['Fotky Jarka Balcara', 'http://beskydski.rajce.idnes.cz/bdv2017_fotograf_4/'],
+      ['Fotky pana Rašky', 'http://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_do_vrchu_Raztoka_-_Pustevny_2017_ZR_FR/'],
+      ['Fotky Tomáše Popa', 'https://www.zonerama.com/tomasp1/Album/3926961'],
+    ]],
+    [2016, [
+      ['Fotky Zdenka Holomého', 'http://beskydski.rajce.idnes.cz/bdv2016_fotograf_1/'],
+      ['Fotky Jarka Balcara', 'http://beskydski.rajce.idnes.cz/bdv2016_fotograf_2/'],
+      ['Fotky Petry Žallmannové', 'http://beskydski.rajce.idnes.cz/bdv2016_fotograf_4/'],
+      ['Fotky Radky Florianové', 'http://beskydski.rajce.idnes.cz/bdv2016_fotograf_3/'],
+    ]],
+    [2015, [
+      ['Fotky Honzy Balcara', 'https://balci.rajce.idnes.cz/Beh_do_Vrchu_Raztoka_-_Pustevny_2015/'],
+      ['Fotky pana Rašky – první část', 'http://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_Raztoka_-_Pustevny_2015/'],
+      ['Fotky pana Rašky – druhá část', 'http://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_Raztoka_-_Pustevny_2015_RV/'],
+    ]],
+  ]
+%>
 
-<!-- Content -->
-<div id="content">
+<section class="py-5">
   <div class="container">
-
-    <div class="row">
-      <div class="col-md-12">
-
-        <h2>Galerie</h2>
-
-        <div class="row">
-          <div class="col-md-12">
-            Pokud jste nafotili během našeho závodu nějaké fotky a nevadilo by Vám se o ně podělit s ostatními závodníky, pošlete nám info a my zde vyvěsíme odkaz na Vaši galerii. Uděláte radost nejen nám, ale především ostatním závodníkům.
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
-            <h3>2024</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-
-              <li><a class="more" href="https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2024" target="_blank">Fotky Zdenka Holomého</a></li>
-              <li><a class="more" href="https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2024-ii" target="_blank">Fotky Jarka Balcara</a></li>
-              <li><a class="more" href="https://www.rajce.idnes.cz/starochlc/album/beh-do-vrchu-raztoka-pustevny-2024" target="_blank">Fotky pana Rašky I</a></li>
-              <li><a class="more" href="https://www.rajce.idnes.cz/starochlc/album/beh-do-vrchu-raztoka-pustevny-5-km-2024-zr" target="_blank">Fotky pana Rašky II</a></li>
-
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <h3>2023</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-
-              <li><a class="more" href="https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchnu-2023" target="_blank">Fotky Zdenka Holomého</a></li>
-              <li><a class="more" href="https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2023-ii" target="_blank">Fotky Jarka Balcara</a></li>
-              <li><a class="more" href="https://www.rajce.idnes.cz/beskydski/album/beh-do-vrchu-2023-iii" target="_blank">Fotky Petry Schwarzové Žallmannové</a></li>
-              <li><a class="more" href="https://www.rajce.idnes.cz/sk-zafar-frenstat-p-r/album/zavod-do-vrchu-raztoka-pustevny-2023" target="_blank">Fotky pana Rašky</a></li>
-
-            </ul>
-          </div>
-
-          <div class="col-md-4">
-            <h3>2022</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-
-              <li><a class="more" href="https://beskydski.rajce.idnes.cz/Beh_do_vrchu_2022/" target="_blank">Fotky Zdenka Holomého</a></li>
-              <li><a class="more" href="https://beskydski.rajce.idnes.cz/Beh_do_vrchu_2022_II/" target="_blank">Fotky organizátorů</a></li>
-
-            </ul>   
-          </div>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-md-4">
-            <h3>2018</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-
-              <li><a class="more" href="https://beskydski.rajce.idnes.cz/bdv2018_foto_I/" target="_blank">Fotky Zdenka Holomého</a></li>
-              <li><a class="more" href="https://beskydski.rajce.idnes.cz/bdv2018_foto_II/" target="_blank">Fotky Jarka Balcara</a></li>
-
-              <li><a class="more" href="https://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_do_vrchu_Raztoka_-_Pustevny_2018_ZR_FR/" target="_blank">Fotky pana Rašky</a></li>
-              <li><a class="more" href="https://www.zonerama.com/tomaspop/Album/4893348" target="_blank">Fotky Tomáše Popa</a></li>
-
-            </ul>   
-          </div>
-
-          <div class="col-md-4">
-            <h3>2017</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2017_fotograf_1/" target="_blank">Fotky Petry Žallmannové I</a></li>
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2017_fotograf_2/" target="_blank">Fotky Petry Žallmannové II</a></li>
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2017_fotograf_3/" target="_blank">Fotky Honzy Balcara</a></li>
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2017_fotograf_4/" target="_blank">Fotky Jarka Balcara</a></li>
-
-              <li><a class="more" href="http://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_do_vrchu_Raztoka_-_Pustevny_2017_ZR_FR/" target="_blank">Fotky pana Rašky</a></li>
-              <li><a class="more" href="https://www.zonerama.com/tomasp1/Album/3926961" target="_blank">Fotky Tomáše Popa</a></li>
-            </ul>   
-          </div>
-
-          <div class="col-md-4">
-            <h3>2016</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2016_fotograf_1/" target="_blank">Fotky Zdenka Holomého</a></li>
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2016_fotograf_2/" target="_blank">Fotky Jarka Balcara</a></li>
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2016_fotograf_4/" target="_blank">Fotky Petry Žallmannové</a></li>
-              <li><a class="more" href="http://beskydski.rajce.idnes.cz/bdv2016_fotograf_3/" target="_blank">Fotky Radky Florianové</a></li>
-            </ul>   
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <h3>2015</h3>
-
-            <div class="space10"></div>
-
-            <ul class="list-a">
-              <li><a class="more" href="https://balci.rajce.idnes.cz/Beh_do_Vrchu_Raztoka_-_Pustevny_2015/" target="_blank">Fotky Honzy Balcara</a></li>
-            
-              <li>Fotky pana Rašky - <a class="more" href="http://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_Raztoka_-_Pustevny_2015/" target="_blank">první část</a></li>
-              <li>Fotky pana Rašky - <a class="more" href="http://sk-zafar-frenstat-p-r.rajce.idnes.cz/Beh_Raztoka_-_Pustevny_2015_RV/" target="_blank">druhá část</a></li
-            </ul>   
-          </div>
-
-          <div class="col-md-4">
-          </div>
-
-          <div class="col-md-4">
-          </div>
-
-        </div>
-
-        <div class="space20"></div>
-
-      </div>
-
+    <div class="bdv-note mb-4">
+      <p><i class="bi bi-camera me-2"></i>Pokud jste nafotili během našeho závodu nějaké fotky a nevadilo by Vám se o ně podělit s ostatními závodníky, pošlete nám info a my zde vyvěsíme odkaz na Vaši galerii. Uděláte radost nejen nám, ale především ostatním závodníkům.</p>
     </div>
-    <div class="space50"></div> 
 
+    <div class="row g-3">
+      <% albums.each do |year, links| %>
+        <div class="col-sm-6 col-lg-4">
+          <div class="bdv-year-card">
+            <h3><%= year %></h3>
+            <ul>
+              <% links.each do |label, url| %>
+                <li><i class="bi bi-images"></i><a href="<%= url %>" target="_blank" rel="noopener"><%= label %></a></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<!-- Content End -->
-
+</section>

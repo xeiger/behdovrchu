@@ -1,239 +1,131 @@
-<!-- Content -->
-<div id="content">
-  <div class="container">
-    <div class="f-center">
-      <h2>Běh do vrchu Ráztoka - Pustevny</h2>
-
-      <%#= render 'partials/covid' %>
-
-    </div>
-    <div class="f-hr"></div>
-
-    <div class="row space20"></div>
-    <div class="f-center">
-      <div class="head-info">
-        <b>V sobotu 5.12.2026 se uskuteční 56. ročník tradičního běžeckého závodu "Běh do vrchu Ráztoka – Pustevny".</b>
-      </div>
-      <div class="head-info">
-        Pořádá tým <b>BeskydSki</b>
+<% content_for :hero do %>
+  <section class="bdv-hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade bdv-hero-carousel" data-bs-ride="carousel" data-bs-interval="6000">
+      <div class="carousel-inner">
+        <% (1..5).each do |i| %>
+          <div class="carousel-item<%= ' active' if i == 1 %>">
+            <%= image_tag "slider/#{i}.jpg", alt: '', class: 'bdv-hero-img' %>
+          </div>
+        <% end %>
       </div>
     </div>
-    <div class="f-hr"></div>
-
-    <div class="row space40"></div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row">
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Spustili jsme registraci do závodu. Pro přihlášení použijte  <%= link_to 'webový formulář', new_entrant_path, class: 'more' %>.
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Tradiční trať</h4></div>
-            <div class="text-1">
-              Trasa závodu zůstává stále stejná: Hotel Ráztoka - Horní stanice lanové dráhy
-            </div>
-          </div>
-<% if false %>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Závod je za námi</h4></div>
-            <div class="text-1">
-              Děkujeme všem za účast. Jsme rádi, že zůstáváte věrni tomuto tradičnímu závodu, a již nyní Vás zveme na další ročník, který se uskuteční první sobotu v prosinci, tj. 5.12.2026.
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Výsledky závodu</h4></div>
-            <div class="text-1">
-              Přidali jsme na web výsledky, jsou k dispozici i ke stažení ve formátu .pdf. Více <%= link_to 'zde', results_page_path, class: 'more' %>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              V brzké době spustíme registraci do závodu. Sledujte náš <%= link_to 'facebook - BehDoVrchu', "https://www.facebook.com/BehDoVrchu/", class: 'more', target: '_blank' %>
-             </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Závod je za námi</h4></div>
-            <div class="text-1">
-              Děkujeme všem za účast. Jsme rádi, že zůstáváte věrni tomuto tradičnímu závodu, a již nyní Vás zveme na další ročník, který se uskuteční první sobotu v prosinci, tj. 6.12.2025.
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Výsledky závodu</h4></div>
-            <div class="text-1">
-              Přidali jsme na web výsledky, jsou k dispozici i ke stažení ve formátu .pdf. Více <%= link_to 'zde', results_page_path, class: 'more' %>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Fotky ze závodu</h4></div>
-            <div class="text-1">
-              Přidali jsme na web odkaz na fotogalerii závodu. Více <%= link_to 'zde', gallery_page_path, class: 'more' %>
-            </div>
-          </div>
-
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Během příštího týdne spustíme registraci do závodu. Sledujte náš <%= link_to 'facebook - BehDoVrchu', "https://www.facebook.com/BehDoVrchu/", class: 'more', target: '_blank' %>
-             </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Fotky ze závodu - test</h4></div>
-            <div class="text-1">
-              Přidali jsme na web odkaz na fotogalerii závodu. Více <%= link_to 'zde', gallery_page_path, class: 'more' %>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Tradiční trať</h4></div>
-            <div class="text-1">
-              Trasa závodu zůstává stále stejná: Hotel Ráztoka - Horní stanice lanové dráhy
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, určitě přijďte, přihlásit se můžete v den závodu při prezenci.
-            </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Výsledky závodu</h4></div>
-            <div class="text-1">
-              Přidali jsme na web výsledky, jsou k dispozici i ke stažení ve formátu .pdf. Více <%= link_to 'zde', results_page_path, class: 'more' %>
-            </div>
-          </div>
-
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, určitě přijďte, přihlásit se můžete v den závodu při prezenci.
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Tradiční trať</h4></div>
-            <div class="text-1">
-              Trasa závodu zůstává stále stejná: Hotel Ráztoka - Horní stanice lanové dráhy
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Spustili jsme registraci do závodu. Pro přihlášení použijte  <%= link_to 'webový formulář', new_entrant_path, class: 'more' %>.
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Během příštího týdne spustíme registraci do závodu. Sledujte náš <%= link_to 'facebook - BehDoVrchu', "https://www.facebook.com/BehDoVrchu/", class: 'more', target: '_blank' %>
-             </div>
-          </div>
-
-
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Spustili jsme registraci do závodu. Pro přihlášení použijte  <%= link_to 'webový formulář', new_entrant_path, class: 'more' %>.
-            </div>
-          </div>
-
-          <div class="col-md-6">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Během příštího týdne spustíme registraci do závodu. Sledujte náš <%= link_to 'facebook - BehDoVrchu', "https://www.facebook.com/BehDoVrchu/", class: 'more', target: '_blank' %>
-             </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Kreditní karta</h4></div>
-            <div class="text-1">
-              Při závodu byla nalezena platební karta. Pokud patřila někomu z Vás, je k dispozici u obsluhy parkoviště v Ráztoce.
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Snad nás Cov</h4></div>
-            <div class="text-1">
-              Doufáme, že si nenecháte ujít 
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, můžete se ještě přihlásit v den závodu při prezenci.
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Překvapení v cíli</h4></div>
-            <div class="text-1">
-              Vzhledem k tomu, že na Pustevny se běhá již 50 let, čeká každého z Vás v cíli památeční medaile.
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Registrace do závodu</h4></div>
-            <div class="text-1">
-              Pondělí 2.12. je poslední den, kdy se můžete registrovat s předstihem. Tak to neodkládejte, startovní listina se plní. Pro přihlášení použijte  <%= link_to 'webový formulář', new_entrant_path, class: 'more' %>. Přihlásit se samořejmě budete moci ještě v den závodu.
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="ic-1"><span><i class="fa fa-paperclip"></i></span></div>
-            <div class="title-1"><h4>Kapacita závodu</h4></div>
-            <div class="text-1">
-              Vzhledem k loňské vysoké účasti jsme se rozhodli navýšit limit pro počet startujících v hlavním závodě na 350.
-            </div>
-          </div>
+    <div class="bdv-hero-overlay">
+      <div class="container">
+        <span class="bdv-hero-kicker"><%= RACE[:edition] %>. ročník &middot; sobota <%= czech_date(RACE[:date]) %></span>
+        <h1 class="bdv-hero-title">Běh do vrchu<br>Ráztoka – Pustevny</h1>
+        <p class="bdv-hero-lead">Tradiční běžecký závod po Knížecí cestě od Hotelu Ráztoka k horní stanici lanové dráhy na Pustevnách. 5&nbsp;700&nbsp;m, převýšení 400&nbsp;m.</p>
+        <p class="bdv-hero-org">Pořádá tým <strong>BeskydSki</strong></p>
+        <div class="d-flex flex-wrap gap-2">
+          <% if RACE[:registration] == :open %>
+            <%= link_to new_entrant_path, class: 'btn btn-brand btn-lg px-4' do %><i class="bi bi-pencil-square me-2"></i>Přihlásit se<% end %>
+          <% end %>
+          <%= link_to programme_page_path, class: 'btn btn-outline-light btn-lg px-4' do %>Propozice<% end %>
+        </div>
+      </div>
+    </div>
+  </section>
 <% end %>
 
-        </div>   
-      </div>   
-
-    <div class="space50"></div> 
-
+<section class="bdv-facts">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="bdv-fact">
+          <i class="bi bi-calendar-event"></i>
+          <div>
+            <div class="bdv-fact-label">Datum</div>
+            <div class="bdv-fact-value">sobota <%= short_date(RACE[:date]) %></div>
+            <div class="bdv-fact-sub">Hotel Ráztoka, Trojanovice</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="bdv-fact">
+          <i class="bi bi-flag"></i>
+          <div>
+            <div class="bdv-fact-label">Start</div>
+            <div class="bdv-fact-value">12:00</div>
+            <div class="bdv-fact-sub">hromadný, prezence 9:00 – 11:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="bdv-fact">
+          <i class="bi bi-signpost-split"></i>
+          <div>
+            <div class="bdv-fact-label">Trať</div>
+            <div class="bdv-fact-value">5 700 m</div>
+            <div class="bdv-fact-sub">převýšení 400 m, Knížecí cesta</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="bdv-fact">
+          <i class="bi bi-cash-coin"></i>
+          <div>
+            <div class="bdv-fact-label">Startovné</div>
+            <div class="bdv-fact-value"><%= RACE[:fee] %> Kč</div>
+            <div class="bdv-fact-sub">předem do <%= short_date(RACE[:payment_deadline]) %>, na místě <%= RACE[:fee_late] %> Kč</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<!-- Content End -->
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="bdv-section-title">Aktuálně</h2>
+    <div class="row g-4">
+      <% if RACE[:registration] == :finished %>
+        <div class="col-md-6">
+          <div class="bdv-card">
+            <h3><i class="bi bi-trophy"></i>Závod je za námi</h3>
+            <p>Děkujeme všem za účast. Jsme rádi, že zůstáváte věrni tomuto tradičnímu závodu, a již nyní Vás zveme na další ročník, který se uskuteční první sobotu v prosinci, tj. <%= short_date(next_race_date) %>.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bdv-card">
+            <h3><i class="bi bi-list-ol"></i>Výsledky závodu</h3>
+            <p>Přidali jsme na web výsledky, jsou k dispozici i ke stažení ve formátu .pdf. Více <%= link_to 'zde', results_page_path %>.</p>
+          </div>
+        </div>
+      <% else %>
+        <div class="col-md-6">
+          <div class="bdv-card">
+            <h3><i class="bi bi-pencil-square"></i>Registrace do závodu</h3>
+            <% case RACE[:registration]
+               when :open %>
+              <p>Spustili jsme registraci do závodu. Pro přihlášení použijte <%= link_to 'webový formulář', new_entrant_path %>.</p>
+            <% when :closed %>
+              <p>Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, určitě přijďte, přihlásit se můžete v den závodu při prezenci.</p>
+            <% else %>
+              <p>V brzké době spustíme registraci do závodu. Sledujte náš <%= link_to 'facebook – BehDoVrchu', 'https://www.facebook.com/BehDoVrchu/', target: '_blank', rel: 'noopener' %>.</p>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bdv-card">
+            <h3><i class="bi bi-signpost-split"></i>Tradiční trať</h3>
+            <p>Trasa závodu zůstává stále stejná: Hotel Ráztoka – horní stanice lanové dráhy.</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="bdv-kids py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <span class="bdv-kids-badge mb-3"><i class="bi bi-emoji-smile"></i>Součástí akce je i dětský závod</span>
+        <h2 class="mb-2">Závod dětí</h2>
+        <p class="mb-0">Start v 10:00 od Hotelu Ráztoka ke spodní stanici lanové dráhy, délka trati 600&nbsp;m. Dětský závod je bez startovného, přihlašuje se na místě při prezenci od 8:30 do 9:30. Děti můžou běžet v doprovodu rodičů.</p>
+      </div>
+      <div class="col-lg-5 text-lg-end">
+        <%= link_to programme_page_path(anchor: 'deti'), class: 'btn btn-outline-brand btn-lg' do %>Propozice dětského závodu<% end %>
+      </div>
+    </div>
+  </div>
+</section>

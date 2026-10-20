@@ -1,217 +1,101 @@
-<%= render :partial => 'partials/titlebar', locals: {title: 'Výsledky'} %>
-
+<% content_for :page_title, 'Výsledky' %>
 <%
+  # Vysledky aktualniho rocniku: jeden radek = jeden zavodnik
+  # [poradi, J, A, B, C, D, ZJ, ZA, ZB, st. cislo, jmeno, oddil, rocnik, cas, ztrata]
   results = [
     
   ]
+
+  # starsi rocniky: [cislo rocniku, rok] - PDF jsou v public/hlavni_zavod_ROK.pdf a detsky_zavod_ROK.pdf
+  older = [[55, 2025], [54, 2024], [53, 2023], [52, 2022], [50, 2019], [49, 2018], [48, 2017], [47, 2016], [46, 2015]]
 %>
 
-<!-- Content -->
-<div id="content">
+<section class="py-5">
   <div class="container">
 
-    <div class="row">
-      <div class="col-md-12">
+    <ul class="nav bdv-pills mb-4" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-actual" data-bs-toggle="tab" data-bs-target="#actual" type="button" role="tab" aria-controls="actual" aria-selected="true">Aktuální ročník</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-older" data-bs-toggle="tab" data-bs-target="#older" type="button" role="tab" aria-controls="older" aria-selected="false">Starší ročníky</button>
+      </li>
+    </ul>
 
-        <div class="space20"></div>
+    <div class="tab-content">
 
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#actual" aria-controls="actual" role="tab" data-toggle="tab">Aktuální ročník</a></li>
-          <li role="presentation"><a href="#older" aria-controls="older" role="tab" data-toggle="tab">Starší ročníky</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-
-          <!-- aktualni rocnik -->
-          <div role="tabpanel" class="tab-pane active" id="actual">
-            <h2>Výsledky 56. ročníku</h2>
-
-            <% if false %>
-            <div class="space20"></div>
-            <div class="col-md-12 right">
-              výsledky ke stažení <a class="more" href="/hlavni_zavod_2026.pdf" target="_blank">hlavni_zavod_2026.pdf</a> a <a class="more" href="/detsky_zavod_2026.pdf" target="_blank">detsky_zavod_2026.pdf</a>
+      <div class="tab-pane fade show active" id="actual" role="tabpanel" aria-labelledby="tab-actual">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+          <h2 class="bdv-section-title mb-0">Výsledky <%= RACE[:edition] %>. ročníku</h2>
+          <% if RACE[:results_pdf] %>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-outline-brand btn-sm" href="/hlavni_zavod_<%= RACE[:year] %>.pdf" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Hlavní závod (PDF)</a>
+              <a class="btn btn-outline-brand btn-sm" href="/detsky_zavod_<%= RACE[:year] %>.pdf" target="_blank"><i class="bi bi-file-earmark-pdf me-1"></i>Dětský závod (PDF)</a>
             </div>
-            <% end %>
-
-            <div class="space10"></div>
-
-            <table class="table table-bordered">
-              <thead>
-                <tr class="result">
-                  <th class="v-middle" rowspan="2">#</th>
-                  <th colspan="5">Muži</th>
-                  <th colspan="3">Ženy</th>
-                  <th class="v-middle" rowspan="2">St.<br>číslo</th>
-                  <th class="v-middle" rowspan="2">Jméno</th>
-                  <th class="v-middle" rowspan="2">Oddíl</th>
-                  <th class="v-middle" rowspan="2">Ročník</th>
-                  <th class="v-middle" rowspan="2">Čas</th>
-                  <th class="v-middle" rowspan="2">Ztráta</th>
-                </tr>
-                <tr class="result">
-                  <th class="w-5">J</th>
-                  <th class="w-5">A</th>
-                  <th class="w-5">B</th>
-                  <th class="w-5">C</th>
-                  <th class="w-5">D</th>
-                  <th class="w-5">ZJ</th>
-                  <th class="w-5">ZA</th>
-                  <th class="w-5">ZB</th>
-                </tr>
-              </thead>
-
-              <tbody>
-
-                <% results.each_with_index do |r, index| %>
-                  <tr class="<%= index%2 == 0 ? 'even' : 'odd' %>">
-                      <td class="center"><%= index + 1 %></td>
-                      <td class="center w-5"><%= r[1] %></td>
-                      <td class="center w-5"><%= r[2] %></td>
-                      <td class="center w-5"><%= r[3] %></td>
-                      <td class="center w-5"><%= r[4] %></td>
-                      <td class="center w-5"><%= r[5] %></td>
-                      <td class="center w-5"><%= r[6] %></td>
-                      <td class="center w-5"><%= r[7] %></td>
-                      <td class="center w-5"><%= r[8] %></td>
-                      <td class="center"><%= r[9] %></td>
-                      <td><%= r[10] %></td>
-                      <td><%= r[11] %></td>
-                      <td class="center"><%= r[12] %></td>
-                      <td class="center"><%= r[13] %></td>
-                      <td class="center"><%= r[14] %></td>
-                  </tr> 
-                <% end %>
-
-              </tbody>
-            </table>
-
-          </div>
-
-          <!-- starsi rocniky -->
-          <div role="tabpanel" class="tab-pane" id="older">
-
-            <div class="row">
-
-              <div class="col-md-4">
-                <h3>55. ročník - 2025</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2025.pdf" target="_blank">hlavni_zavod_2025.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2025.pdf" target="_blank">detsky_zavod_2025.pdf</a>
-                </ul>   
-              </div>
-
-              <div class="col-md-4">
-                <h3>54. ročník - 2024</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2024.pdf" target="_blank">hlavni_zavod_2024.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2024.pdf" target="_blank">detsky_zavod_2024.pdf</a>
-                </ul>   
-              </div>
-
-              <div class="col-md-4">
-                <h3>53. ročník - 2023</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2023.pdf" target="_blank">hlavni_zavod_2023.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2023.pdf" target="_blank">detsky_zavod_2023.pdf</a>
-                </ul>   
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="col-md-4">
-                <h3>52. ročník - 2022</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2022.pdf" target="_blank">hlavni_zavod_2022.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2022.pdf" target="_blank">detsky_zavod_2022.pdf</a>
-                </ul>   
-              </div>
-
-              <div class="col-md-4">
-                <h3>50. ročník - 2019</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2019.pdf" target="_blank">hlavni_zavod_2019.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2019.pdf" target="_blank">detsky_zavod_2019.pdf</a>
-                </ul>   
-              </div>
-
-              <div class="col-md-4">
-                <h3>49. ročník - 2018</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2018.pdf" target="_blank">hlavni_zavod_2018.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2018.pdf" target="_blank">detsky_zavod_2018.pdf</a>
-                </ul>   
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="col-md-4">
-                <h3>48. ročník - 2017</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2017.pdf" target="_blank">hlavni_zavod_2017.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2017.pdf" target="_blank">detsky_zavod_2017.pdf</a>
-                </ul>   
-              </div>
-
-              <div class="col-md-4">
-                <h3>47. ročník - 2016</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2016.pdf" target="_blank">hlavni_zavod_2016.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2016.pdf" target="_blank">detsky_zavod_2016.pdf</a>
-                </ul>   
-              </div>
-
-              <div class="col-md-4">
-                <h3>46. ročník - 2015</h3>
-
-                <div class="space10"></div>
-
-                <ul class="list-a">
-                  <li><a class="more" href="/hlavni_zavod_2015.pdf" target="_blank">hlavni_zavod_2015.pdf</a>
-                  <li><a class="more" href="/detsky_zavod_2015.pdf" target="_blank">detsky_zavod_2015.pdf</a>
-                </ul>   
-              </div>
-
-            </div>
-
-
-          </div>
+          <% end %>
         </div>
 
+        <% if results.empty? %>
+          <div class="bdv-note">
+            <p><i class="bi bi-hourglass-split me-2"></i>Výsledky <%= RACE[:edition] %>. ročníku doplníme krátce po závodě, který se běží v sobotu <%= short_date(RACE[:date]) %>. Do té doby se podívejte na starší ročníky.</p>
+          </div>
+        <% else %>
+          <div class="bdv-table-wrap">
+            <div class="table-responsive">
+              <table class="table table-brand table-striped table-hover align-middle mb-0 text-nowrap">
+                <thead>
+                  <tr>
+                    <th rowspan="2" class="align-middle">#</th>
+                    <th colspan="5" class="text-center">Muži</th>
+                    <th colspan="3" class="text-center">Ženy</th>
+                    <th rowspan="2" class="align-middle text-center">St. číslo</th>
+                    <th rowspan="2" class="align-middle">Jméno</th>
+                    <th rowspan="2" class="align-middle">Oddíl</th>
+                    <th rowspan="2" class="align-middle text-center">Ročník</th>
+                    <th rowspan="2" class="align-middle text-center">Čas</th>
+                    <th rowspan="2" class="align-middle text-center">Ztráta</th>
+                  </tr>
+                  <tr>
+                    <% %w[J A B C D ZJ ZA ZB].each do |c| %><th class="text-center w-cat"><%= c %></th><% end %>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% results.each_with_index do |r, index| %>
+                    <tr>
+                      <td class="text-muted"><%= index + 1 %></td>
+                      <% (1..8).each do |i| %><td class="text-center fw-semibold"><%= r[i] %></td><% end %>
+                      <td class="text-center"><%= r[9] %></td>
+                      <td class="fw-semibold"><%= r[10] %></td>
+                      <td><%= r[11] %></td>
+                      <td class="text-center"><%= r[12] %></td>
+                      <td class="text-center"><%= r[13] %></td>
+                      <td class="text-center text-muted"><%= r[14] %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <% end %>
       </div>
+
+      <div class="tab-pane fade" id="older" role="tabpanel" aria-labelledby="tab-older">
+        <h2 class="bdv-section-title">Starší ročníky</h2>
+        <div class="row g-3">
+          <% older.each do |edition, year| %>
+            <div class="col-sm-6 col-lg-4">
+              <div class="bdv-year-card">
+                <h3><%= year %> <small><%= edition %>. ročník</small></h3>
+                <ul>
+                  <li><i class="bi bi-file-earmark-pdf"></i><a href="/hlavni_zavod_<%= year %>.pdf" target="_blank">Hlavní závod</a></li>
+                  <li><i class="bi bi-file-earmark-pdf"></i><a href="/detsky_zavod_<%= year %>.pdf" target="_blank">Dětský závod</a></li>
+                </ul>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
     </div>
-    <div class="space50"></div> 
-
   </div>
-</div>
-<!-- Content End -->
-
+</section>

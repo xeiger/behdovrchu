@@ -1,25 +1,151 @@
-  /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- *= require bootstrap3-switch
+/*
+ * Běh do vrchu Ráztoka – Pustevny, redesign 2026
+ * Bootstrap 5 se načítá z CDN v layoutu, tady jsou jen vlastní styly.
+ * Paleta vychází z loga: fialová #64296d, mentolová #a9d9d9.
  */
-
- @font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../assets/glyphicons-halflings-regular.eot');
-  src: url('../assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-  url('../assets/glyphicons-halflings-regular.woff') format('woff'),
-  url('../assets/glyphicons-halflings-regular.ttf') format('truetype'),
-  url('../assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+:root {
+  --bdv-purple: #64296d;
+  --bdv-purple-dark: #4b1d52;
+  --bdv-purple-deep: #2e1233;
+  --bdv-purple-light: #883894;
+  --bdv-mint: #a9d9d9;
+  --bdv-mint-light: #d4ecec;
+  --bdv-mint-pale: #eef7f7;
+  --bdv-ink: #2b2b2b;
+  --bdv-muted: #6b6b6b;
+  --bs-body-font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bs-body-color: var(--bdv-ink);
+  --bs-link-color-rgb: 100, 41, 109;
+  --bs-link-hover-color-rgb: 136, 56, 148;
+  --bs-heading-color: var(--bdv-purple-deep);
 }
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; display: flex; flex-direction: column; font-size: 1.05rem; line-height: 1.6; background: #fff; }
+main { flex: 1 0 auto; }
+h1, h2, h3, h4, .bdv-display { font-family: "Barlow Condensed", "Barlow", sans-serif; font-weight: 600; letter-spacing: .01em; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Tlačítka */
+.btn-brand {
+  --bs-btn-bg: var(--bdv-purple); --bs-btn-border-color: var(--bdv-purple); --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--bdv-purple-light); --bs-btn-hover-border-color: var(--bdv-purple-light); --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--bdv-purple-dark); --bs-btn-active-border-color: var(--bdv-purple-dark); --bs-btn-active-color: #fff;
+  --bs-btn-focus-shadow-rgb: 169, 217, 217; font-weight: 600;
+}
+.btn-outline-brand {
+  --bs-btn-color: var(--bdv-purple); --bs-btn-border-color: var(--bdv-purple);
+  --bs-btn-hover-bg: var(--bdv-mint-light); --bs-btn-hover-border-color: var(--bdv-purple); --bs-btn-hover-color: var(--bdv-purple);
+  --bs-btn-active-bg: var(--bdv-purple); --bs-btn-active-border-color: var(--bdv-purple); --bs-btn-active-color: #fff;
+  --bs-btn-focus-shadow-rgb: 169, 217, 217; font-weight: 600;
+}
+.btn-check:checked + .btn-outline-brand { background: var(--bdv-purple); border-color: var(--bdv-purple); color: #fff; }
+.btn:hover { text-decoration: none; }
+
+/* Navigace */
+.bdv-navbar { background: #fff; border-bottom: 1px solid var(--bdv-mint-light); box-shadow: 0 2px 12px rgba(46, 18, 51, .06); padding-top: .5rem; padding-bottom: .5rem; }
+.bdv-navbar .navbar-brand:hover { text-decoration: none; }
+.bdv-brand-logo { height: 56px; width: auto; }
+.bdv-brand-text { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.35rem; line-height: 1; color: var(--bdv-purple); margin-left: .75rem; text-transform: uppercase; }
+.bdv-brand-text small { display: block; font-size: .7rem; letter-spacing: .12em; color: var(--bdv-muted); margin-top: .25rem; }
+.bdv-navbar .nav-link { color: var(--bdv-ink); font-weight: 500; padding: .5rem .9rem; border-radius: .5rem; }
+.bdv-navbar .nav-link:hover { background: var(--bdv-mint-pale); color: var(--bdv-purple); text-decoration: none; }
+.bdv-navbar .nav-link.active { background: var(--bdv-mint-light); color: var(--bdv-purple); font-weight: 600; }
+.bdv-navbar .navbar-toggler { border-color: var(--bdv-mint); }
+.bdv-navbar .navbar-toggler:focus { box-shadow: 0 0 0 .2rem rgba(169, 217, 217, .6); }
+
+/* Hero na úvodní stránce */
+.bdv-hero { position: relative; height: 68vh; min-height: 480px; max-height: 760px; background: var(--bdv-purple-deep); overflow: hidden; }
+.bdv-hero-carousel, .bdv-hero-carousel .carousel-inner, .bdv-hero-carousel .carousel-item { height: 100%; }
+.bdv-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.bdv-hero-overlay { position: absolute; inset: 0; z-index: 2; display: flex; align-items: flex-end; padding-bottom: 4.5rem; color: #fff;
+  background: linear-gradient(180deg, rgba(46, 18, 51, .10) 0%, rgba(46, 18, 51, .45) 55%, rgba(46, 18, 51, .85) 100%); }
+.bdv-hero-kicker { display: inline-block; background: var(--bdv-mint); color: var(--bdv-purple-deep); font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .06em; padding: .35rem .8rem; border-radius: .4rem; margin-bottom: 1rem; }
+.bdv-hero-title { font-size: clamp(2.6rem, 7vw, 5rem); line-height: .95; color: #fff; text-transform: uppercase; margin-bottom: .75rem; text-shadow: 0 2px 16px rgba(0, 0, 0, .35); }
+.bdv-hero-lead { font-size: 1.15rem; max-width: 42rem; color: rgba(255, 255, 255, .92); margin-bottom: .5rem; }
+.bdv-hero-org { color: var(--bdv-mint); font-weight: 500; margin-bottom: 1.5rem; }
+.bdv-hero .btn-outline-light:hover { color: var(--bdv-purple-deep); }
+
+/* Pás s klíčovými údaji */
+.bdv-facts { margin-top: -3rem; position: relative; z-index: 2; }
+.bdv-fact { background: #fff; border-radius: 1rem; padding: 1.25rem; box-shadow: 0 10px 30px rgba(46, 18, 51, .12); height: 100%; display: flex; gap: 1rem; align-items: flex-start; border-left: 5px solid var(--bdv-purple); }
+.bdv-fact i { font-size: 1.6rem; color: var(--bdv-purple); line-height: 1; margin-top: .15rem; }
+.bdv-fact-label { text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; color: var(--bdv-muted); font-weight: 600; }
+.bdv-fact-value { font-family: "Barlow Condensed", sans-serif; font-size: 1.55rem; font-weight: 600; line-height: 1.1; color: var(--bdv-purple-deep); }
+.bdv-fact-sub { font-size: .9rem; color: var(--bdv-muted); }
+
+/* Sekce a karty */
+.bdv-section-title { position: relative; padding-left: 1rem; margin-bottom: 1.5rem; font-size: 2rem; }
+.bdv-section-title::before { content: ""; position: absolute; left: 0; top: .18em; bottom: .18em; width: 5px; border-radius: 3px; background: var(--bdv-mint); }
+.bdv-card { background: #fff; border: 1px solid var(--bdv-mint-light); border-radius: 1rem; padding: 1.5rem; height: 100%; }
+.bdv-card h3 { font-size: 1.45rem; display: flex; align-items: center; gap: .6rem; }
+.bdv-card h3 i { color: var(--bdv-purple); }
+.bdv-card p:last-child { margin-bottom: 0; }
+.bdv-kids { background: var(--bdv-mint-pale); }
+.bdv-kids-badge { display: inline-flex; align-items: center; gap: .5rem; background: #fff; border-radius: 2rem; padding: .4rem 1rem; font-weight: 600; color: var(--bdv-purple); }
+
+/* Hlavička podstránky */
+.bdv-page-header { background: linear-gradient(135deg, var(--bdv-purple-deep), var(--bdv-purple) 70%, var(--bdv-purple-light)); color: #fff; padding: 2.5rem 0 2rem; }
+.bdv-page-header h1 { color: #fff; font-size: clamp(2rem, 5vw, 3rem); text-transform: uppercase; margin: 0; }
+.bdv-page-header .breadcrumb { --bs-breadcrumb-divider-color: var(--bdv-mint); font-size: .9rem; margin-bottom: .5rem; }
+.bdv-page-header .breadcrumb a { color: var(--bdv-mint); }
+.bdv-page-header .breadcrumb-item.active { color: rgba(255, 255, 255, .85); }
+
+/* Informační bloky v propozicích */
+.bdv-info { background: #fff; border: 1px solid var(--bdv-mint-light); border-radius: 1rem; overflow: hidden; margin: 0; }
+.bdv-info-row { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: .9rem 1.25rem; border-top: 1px solid var(--bdv-mint-light); }
+.bdv-info-row:first-child { border-top: 0; }
+.bdv-info-row dt { font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 1.15rem; color: var(--bdv-purple); text-transform: uppercase; letter-spacing: .03em; }
+.bdv-info-row dd { margin: 0; }
+@media (max-width: 575.98px) { .bdv-info-row { grid-template-columns: 1fr; gap: .15rem; } }
+.bdv-note { background: var(--bdv-mint-pale); border-left: 5px solid var(--bdv-mint); border-radius: .75rem; padding: 1rem 1.25rem; }
+.bdv-note p:last-child, .bdv-note ul:last-child { margin-bottom: 0; }
+.bdv-list { list-style: none; padding: 0; margin: 0; }
+.bdv-list li { display: flex; gap: .6rem; align-items: flex-start; margin-bottom: .5rem; }
+.bdv-list li i { color: var(--bdv-purple); font-size: 1.15rem; line-height: 1.5; }
+.bdv-anchor-nav { position: sticky; top: 80px; z-index: 5; background: rgba(255, 255, 255, .95); backdrop-filter: blur(6px); padding: .5rem 0; border-bottom: 1px solid var(--bdv-mint-light); }
+
+/* Tabulky */
+.bdv-table-wrap { border-radius: .75rem; overflow: hidden; border: 1px solid var(--bdv-mint-light); }
+.table-brand { --bs-table-striped-bg: var(--bdv-mint-light); --bs-table-hover-bg: var(--bdv-mint); --bs-table-border-color: #fff; margin-bottom: 0; }
+.table-brand thead th { background: var(--bdv-purple); color: #fff; font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; letter-spacing: .04em; text-transform: uppercase; border-color: var(--bdv-purple-light); vertical-align: middle; font-weight: 600; }
+.table-brand td, .table-brand th { padding: .6rem .8rem; }
+.table-brand .w-cat { width: 3rem; }
+
+/* Záložky */
+.bdv-pills .nav-link { color: var(--bdv-purple); font-weight: 600; border-radius: 2rem; padding: .5rem 1.25rem; }
+.bdv-pills .nav-link:hover { background: var(--bdv-mint-pale); text-decoration: none; }
+.bdv-pills .nav-link.active { background: var(--bdv-purple); color: #fff; }
+
+/* Formulář */
+.bdv-form { background: #fff; border: 1px solid var(--bdv-mint-light); border-radius: 1rem; padding: 2rem; }
+@media (max-width: 575.98px) { .bdv-form { padding: 1.25rem; } }
+.form-label { font-weight: 600; margin-bottom: .35rem; }
+.form-control { border-color: #cfdede; padding: .6rem .85rem; }
+.form-control:focus { border-color: var(--bdv-mint); box-shadow: 0 0 0 .25rem rgba(169, 217, 217, .45); }
+
+/* Odznaky */
+.badge-brand { background: var(--bdv-purple); color: #fff; font-weight: 600; }
+.badge-mint { background: var(--bdv-mint); color: var(--bdv-purple-deep); font-weight: 600; }
+.badge-muted { background: #e9ecef; color: var(--bdv-muted); font-weight: 600; }
+
+/* Karty ročníků (výsledky, galerie) */
+.bdv-year-card { background: #fff; border: 1px solid var(--bdv-mint-light); border-radius: 1rem; padding: 1.25rem 1.5rem; height: 100%; }
+.bdv-year-card h3 { font-size: 1.5rem; color: var(--bdv-purple); margin-bottom: .75rem; display: flex; align-items: baseline; gap: .5rem; }
+.bdv-year-card h3 small { font-size: .95rem; color: var(--bdv-muted); font-family: "Barlow", sans-serif; font-weight: 500; }
+.bdv-year-card ul { list-style: none; padding: 0; margin: 0; }
+.bdv-year-card li { padding: .3rem 0; display: flex; gap: .5rem; align-items: center; }
+.bdv-year-card li i { color: var(--bdv-purple); }
+
+/* Patička */
+.bdv-footer { background: var(--bdv-purple-deep); color: rgba(255, 255, 255, .8); padding: 3rem 0 1.5rem; margin-top: 4rem; }
+.bdv-footer h2 { color: #fff; font-size: 1.4rem; text-transform: uppercase; letter-spacing: .04em; }
+.bdv-footer a { color: var(--bdv-mint); }
+.bdv-footer a:hover { color: #fff; }
+.bdv-footer-links { list-style: none; padding: 0; margin: 0; }
+.bdv-footer-links li { padding: .2rem 0; }
+.bdv-footer-links i { margin-right: .5rem; }
+.bdv-footer-bottom { border-top: 1px solid rgba(255, 255, 255, .12); margin-top: 2rem; padding-top: 1.25rem; font-size: .9rem; color: rgba(255, 255, 255, .6); }
+
+/* Hlášky */
+.alert-brand { --bs-alert-bg: var(--bdv-mint-pale); --bs-alert-border-color: var(--bdv-mint); --bs-alert-color: var(--bdv-purple-deep); }

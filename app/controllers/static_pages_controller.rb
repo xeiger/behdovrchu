@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   layout 'application'
 
   def home
-    render layout: 'welcome'
+    # uvodni stranka pouziva stejny layout, hero se vklada pres content_for :hero
   end
 
   def programme

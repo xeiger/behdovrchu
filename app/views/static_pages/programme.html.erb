@@ -1,221 +1,120 @@
-<%= render :partial => 'partials/titlebar', locals: {title: 'Propozice'} %>
+<% content_for :page_title, 'Propozice' %>
+<%
+  y = RACE[:year]
 
-<% 
-  data = []
-  data << {key: 'Datum konání', value: '<b>sobota 5.12.2026</b>'}
-  data << {key: 'Start závodu', value: '12:00, hromadný'}
-  data << {key: 'Trať závodu', value: '<b>Beží se od Hotelu Ráztoka po Knížecí cestě do prostoru horní stanice lanové dráhy. Délka trati je 5700&nbsp;m, převýšení je 400&nbsp;m.</b>'}
-  data << {key: 'Prezence', value: 'Probíhá v den závodu před Hotelem Ráztoka a to od 9:00 do 11:00.'}
-  data << {key: 'Startovné', value: 'Při přihlášení a zaplacení předem <b>250 Kč</b> (platba musí přijít na účet do <b>3.12.2026</b> včetně), po tomto termínu a&nbsp;v&nbsp;den závodu <b>300 Kč</b>.'}
-  data << {key: 'Přihlášky', value: "Přihlašujte se prostřednictvím <a href=#{new_entrant_path} class='more'>webového formuláře</a>. Po odeslání formuláře obdržíte email s platebními údaji. (Máte-li zájem o hromadnou přihlášku, kontaktujte nás prosím emailem.)"}
+  main = [
+    ['Datum konání', "<b>sobota #{short_date(RACE[:date])}</b>"],
+    ['Start závodu', '12:00, hromadný'],
+    ['Trať závodu', '<b>Beží se od Hotelu Ráztoka po Knížecí cestě do prostoru horní stanice lanové dráhy. Délka trati je 5700&nbsp;m, převýšení je 400&nbsp;m.</b>'],
+    ['Prezence', 'Probíhá v den závodu před Hotelem Ráztoka a to od 9:00 do 11:00.'],
+    ['Startovné', "Při přihlášení a zaplacení předem <b>#{RACE[:fee]} Kč</b> (platba musí přijít na účet do <b>#{short_date(RACE[:payment_deadline])}</b> včetně), po tomto termínu a&nbsp;v&nbsp;den závodu <b>#{RACE[:fee_late]} Kč</b>."],
+    ['Přihlášky', "Přihlašujte se prostřednictvím <a href='#{new_entrant_path}'>webového formuláře</a>. Po odeslání formuláře obdržíte email s platebními údaji. (Máte-li zájem o hromadnou přihlášku, kontaktujte nás prosím emailem.)"],
+  ]
+  main_categories = [
+    ['Muži', 'J',  '17 let a méně', "#{y - 17} a mladší"],
+    ['Muži', 'A',  '18 – 39 let',   "#{y - 39} – #{y - 18}"],
+    ['Muži', 'B',  '40 – 49 let',   "#{y - 49} – #{y - 40}"],
+    ['Muži', 'C',  '50 – 59 let',   "#{y - 59} – #{y - 50}"],
+    ['Muži', 'D',  '60 let a více', "#{y - 60} a starší"],
+    ['Ženy', 'ZJ', '17 let a méně', "#{y - 17} a mladší"],
+    ['Ženy', 'ZA', '18 – 39 let',   "#{y - 39} – #{y - 18}"],
+    ['Ženy', 'ZB', '40 let a více', "#{y - 40} a starší"],
+  ]
+  main_notes = [
+    "<b>Limit v hlavním závodě je #{RACE[:capacity]} startujících</b>",
+    'Každý <b>předem přihlášený</b> závodník obdrží při prezentaci tradiční tričko (při přihlášení na místě pouze do vydání zásob)',
+    '<b>Startovní číslo musí být umístěno viditelně na prsou</b>',
+    'Pro závodníky bude zajištěn vývoz oblečení na Pustevny',
+    'V cíli bude pro závodníky zajištěn čaj',
+    'Vyhlášení závodu bude probíhat na Pustevnách v prostoru cíle přibližně ve 14:00',
+    'Parkování aut je možné na veřejných parkovištích v Ráztoce',
+    '<b>Každý závodník startuje na vlastní nebezpečí</b>',
+    'Závod se koná za každého počasí',
+  ]
 
-  data_small = []
-  data_small << {key: 'Datum konání', value: '<b>sobota 5.12.2026</b>'}
-  data_small << {key: 'Start závodu', value: '10:00, hromadný'}
-  data_small << {key: 'Trať závodu', value: 'Beží se od Hotelu Ráztoka ke spodní stanici lanové dráhy. Délka trati je 600m.'}
-  data_small << {key: 'Prezence', value: 'Probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'}
-  data_small << {key: 'Startovné', value: 'Dětský závod je bez startovného.'}
-  data_small << {key: 'Přihlášky', value: 'Přihlašuje se na místě v den závodu při prezentaci. V případě, že se chystáte přijet s větší skupinou dětí, dejte nám, prosím, vědět na náš email.'}
+  kids = [
+    ['Datum konání', "<b>sobota #{short_date(RACE[:date])}</b>"],
+    ['Start závodu', '10:00, hromadný'],
+    ['Trať závodu', 'Beží se od Hotelu Ráztoka ke spodní stanici lanové dráhy. Délka trati je 600&nbsp;m.'],
+    ['Prezence', 'Probíhá v den závodu v bufetu Hotelu Ráztoka a to od 8:30 do 9:30.'],
+    ['Startovné', 'Dětský závod je bez startovného.'],
+    ['Přihlášky', 'Přihlašuje se na místě v den závodu při prezentaci. V případě, že se chystáte přijet s větší skupinou dětí, dejte nám, prosím, vědět na náš email.'],
+  ]
+  kids_categories = [
+    ['Děti',    'M', '1 – 5 let',   "#{y - 5} – #{y - 1}"],
+    ['Chlapci', 'O', '6 – 7 let',   "#{y - 7} – #{y - 6}"],
+    ['Chlapci', 'P', '8 – 10 let',  "#{y - 10} – #{y - 8}"],
+    ['Chlapci', 'R', '11 – 13 let', "#{y - 13} – #{y - 11}"],
+    ['Dívky',   'S', '6 – 7 let',   "#{y - 7} – #{y - 6}"],
+    ['Dívky',   'T', '8 – 10 let',  "#{y - 10} – #{y - 8}"],
+    ['Dívky',   'U', '11 – 13 let', "#{y - 13} – #{y - 11}"],
+  ]
+  kids_notes = [
+    'Vyhlášení závodu bude probíhat před Hotelem Ráztoka ihned po závodě (po přesunutí závodníků zpět do Ráztoky)',
+    '<b>Každý závodník startuje na vlastní nebezpečí</b>',
+    'Závod se koná za každého počasí',
+    'Děti můžou běžet v doprovodu rodičů',
+  ]
 %>
 
-<!-- Content -->
-<div id="content">
+<div class="bdv-anchor-nav">
   <div class="container">
-
-    <!-- Hlavni zavod -->
-    <div class="row">
-      <div class="col-md-12">
-
-        <%#= render 'partials/covid' %>
-
-        <h2>Hlavní závod</h2>
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <% data.each do |d| %>
-              <div class="bs-callout bs-callout-danger">
-                <h4><%= d[:key] %></h4>
-                <p><%= raw d[:value] %></p>
-              </div>
-            <% end %>
-
-            <h3>Kategorie</h3>
-
-            <div class="col-md-8 col-md-offset-2">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th class="col-md-1" colspan="2">Kategorie</th>
-                    <th class="col-md-3">Věk</th>
-                    <th class="col-md-3">Ročník narození</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class='even'>
-                    <td class="center">Muži</td>
-                    <td class="center">J</td>
-                    <td class="center">17 let a méně</td>
-                    <td class="center">2009 a mladší</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Muži</td>
-                    <td class="center">A</td>
-                    <td class="center">18 - 39 let</td>
-                    <td class="center">1987 - 2008</td>
-                  </tr>  
-                  <tr class='even'>
-                    <td class="center">Muži</td>
-                    <td class="center">B</td>
-                    <td class="center">40 - 49 let</td>
-                    <td class="center">1977 - 1986</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Muži</td>
-                    <td class="center">C</td>
-                    <td class="center">50 - 59 let</td>
-                    <td class="center">1967 - 1976</td>
-                  </tr>  
-                  <tr class='even'>
-                    <td class="center">Muži</td>
-                    <td class="center">D</td>
-                    <td class="center">60 let a více</td>
-                    <td class="center">1966 a starší</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Ženy</td>
-                    <td class="center">ZJ</td>
-                    <td class="center">17 let a méně</td>
-                    <td class="center">2009 a mladší</td>
-                  </tr>  
-                  <tr class='even'>
-                    <td class="center">Ženy</td>
-                    <td class="center">ZA</td>
-                    <td class="center">18 - 39 let</td>
-                    <td class="center">1987 - 2008</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Ženy</td>
-                    <td class="center">ZB</td>
-                    <td class="center">40 let a více</td>
-                    <td class="center">1986 a starší</td>
-                  </tr>  
-                </tbody>
-              </table>
-            </div>
-
-            <h3>Doplňující informace</h3>
-            <ul class="list-a">
-              <li><b>Limit v hlavním závodě je 300 startujících</b></li>
-              <li>Každý <b>předem přihlášený</b> závodník obdrží při prezentaci tradiční tričko (při přihlášení na místě pouze do vydání zásob)</li>
-              <li><b>Startovní číslo musí být umístěno viditelně na prsou</b></li>
-              <li>Pro závodníky bude zajištěn vývoz oblečení na Pustevny</li>
-              <li>V cíli bude pro závodníky zajištěn čaj</li>
-              <li>Vyhlášení závodu bude probíhat na Pustevnách v prostoru cíle přibližně ve 14:00</li>
-              <li>Parkování aut je možné na veřejných parkovištích v Ráztoce</li>
-              <li><b>Každý závodník startuje na vlastní nebezpečí</b></li>
-              <li>Závod se koná za každého počasí</li>
-            </ul>   
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-      <!-- HLavni zavod End -->
-
-    <!-- Maly zavod -->
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Závod dětí</h2>
-
-        <div class="row">
-          <div class="col-md-12">
-
-            <% data_small.each do |d| %>
-              <div class="bs-callout bs-callout-danger">
-                <h4><%= d[:key] %></h4>
-                <p><%= raw d[:value] %></p>
-              </div>
-            <% end %>
-
-            <h3>Kategorie</h3>
-
-            <div class="col-md-8 col-md-offset-2">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th class="col-md-1" colspan="2">Kategorie</th>
-                    <th class="col-md-3">Věk</th>
-                    <th class="col-md-3">Ročník narození</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class='even'>
-                    <td class="center">Děti</td>
-                    <td class="center">M</td>
-                    <td class="center">1 - 5 let</td>
-                    <td class="center">2021 - 2025</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Chlapci</td>
-                    <td class="center">O</td>
-                    <td class="center">6 - 7 let</td>
-                    <td class="center">2019 - 2020</td>
-                  </tr>  
-                  <tr class='even'>
-                    <td class="center">Chlapci</td>
-                    <td class="center">P</td>
-                    <td class="center">8 - 10 let</td>
-                    <td class="center">2016 - 2018</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Chlapci</td>
-                    <td class="center">R</td>
-                    <td class="center">11 - 13 let</td>
-                    <td class="center">2013 - 2015</td>
-                  </tr>  
-                  <tr class='even'>
-                    <td class="center">Dívky</td>
-                    <td class="center">S</td>
-                    <td class="center">6 - 7 let</td>
-                    <td class="center">2019 - 2020</td>
-                  </tr>  
-                  <tr class='odd'>
-                    <td class="center">Dívky</td>
-                    <td class="center">T</td>
-                    <td class="center">8 - 10 let</td>
-                    <td class="center">2016 - 2018</td>
-                  </tr>  
-                  <tr class='even'>
-                    <td class="center">Dívky</td>
-                    <td class="center">U</td>
-                    <td class="center">11 - 13 let</td>
-                    <td class="center">2013 - 2015</td>
-                  </tr>  
-                </tbody>
-              </table>
-            </div>
-
-            <h3>Doplňující informace</h3>
-            <ul class="list-a">
-              <li>Vyhlášení závodu bude probíhat v před Hotelem Ráztoka ihned po závodě (po přesunutí závodníků zpět do Ráztoky)</li>
-              <li><b>Každý závodník startuje na vlastní nebezpečí</b></li>
-              <li>Závod se koná za každého počasí</li>
-              <li>Děti můžou běžet v doprovodu rodičů</li>
-            </ul>   
-
-
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-    <!-- Maly zavod End -->
-
-    <div class="space50"></div> 
-
+    <ul class="nav bdv-pills">
+      <li class="nav-item"><a class="nav-link" href="#hlavni-zavod">Hlavní závod</a></li>
+      <li class="nav-item"><a class="nav-link" href="#deti">Závod dětí</a></li>
+    </ul>
   </div>
 </div>
-<!-- Content End -->
+
+<% [['hlavni-zavod', 'Hlavní závod', main, main_categories, main_notes, 'Kategorie hlavního závodu'],
+    ['deti', 'Závod dětí', kids, kids_categories, kids_notes, 'Kategorie dětského závodu']].each do |id, title, info, categories, notes, cat_title| %>
+  <section id="<%= id %>" class="py-5">
+    <div class="container">
+      <h2 class="bdv-section-title"><%= title %></h2>
+
+      <dl class="bdv-info">
+        <% info.each do |key, value| %>
+          <div class="bdv-info-row">
+            <dt><%= key %></dt>
+            <dd><%= raw value %></dd>
+          </div>
+        <% end %>
+      </dl>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-7">
+          <h3 class="h4 mb-3"><%= cat_title %></h3>
+          <div class="bdv-table-wrap">
+            <table class="table table-brand table-striped align-middle mb-0">
+              <thead>
+                <tr>
+                  <th colspan="2">Kategorie</th>
+                  <th>Věk</th>
+                  <th>Ročník narození</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% categories.each do |group, code, age, years| %>
+                  <tr>
+                    <td><%= group %></td>
+                    <td class="w-cat fw-semibold"><%= code %></td>
+                    <td><%= age %></td>
+                    <td><%= years %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <h3 class="h4 mb-3">Doplňující informace</h3>
+          <ul class="bdv-list">
+            <% notes.each do |note| %>
+              <li><i class="bi bi-check2-circle"></i><span><%= raw note %></span></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>

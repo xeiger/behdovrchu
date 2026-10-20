@@ -1,64 +1,60 @@
-<%= render :partial => 'partials/titlebar', locals: {title: 'Seznam přihlášených'} %>
+<% content_for :page_title, 'Seznam přihlášených' %>
 
-<!-- Content -->
-<div id="content">
+<section class="py-5">
   <div class="container">
+    <%= render 'partials/flash' %>
 
-    <div class="row">
-      <div class="col-md-12">
-
-        <%#= render 'partials/covid' %>
-
-        <h2>Seznam registrovaných závodníků</h2>
-
-        <ul class="list-a">
-          <li>
-            V případě, že Vám do jednoho dne od přihlášení nepřijde e-mail s informacemi k zaplacení startovného, prosíme, kontaktujte nás na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
-          </li>
-          <li>
-            Číslo na začátku řádku <b>NENÍ</b> startovní číslo
-          </li>
-        </ul>
-
-        <div class="space20"></div> 
-
-        <%= render(:partial => "partials/flash", :locals => { :flash => flash }) %>
-
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th class="col-md-1">#</th>
-              <th class="col-md-2">Jméno</th>
-              <th class="col-md-3">Příjmení</th>
-              <th class="col-md-3">Oddíl</th>
-              <th class="col-md-1">Rok</th>
-              <th class="col-md-1">Horolezec</th>
-              <th class="col-md-1">Zaplaceno</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <% @entrants.each_with_index do |entrant, index| %>
-              <tr class="<%= index%2 == 0 ? 'even' : 'odd' %>">
-                <td class="center"><%= index + 1 %></td>
-                <td><%= entrant.first_name %></td>
-                <td><%= entrant.surname %></td>
-                <td><%= entrant.club %></td>
-                <td class="center"><%= entrant.year %></td>
-                <td class="center"><%= entrant.climber ? 'ANO' : 'NE' %></td>
-                <td class="center <%= entrant.paid ? '' : 'un' %>paid"><%= entrant.paid ? 'ANO' : 'NE' %></td>
-              </tr>  
-            <% end %>
-
-          </tbody>
-        </table>
-
-      </div>
-
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+      <h2 class="bdv-section-title mb-0">Seznam registrovaných závodníků</h2>
+      <span class="badge badge-mint fs-6 rounded-pill px-3 py-2"><i class="bi bi-people me-1"></i><%= @entrants.size %> / <%= RACE[:capacity] %></span>
     </div>
 
-    <div class="space50"></div> 
+    <div class="bdv-note mb-4">
+      <ul class="bdv-list mb-0">
+        <li><i class="bi bi-envelope"></i><span>V případě, že Vám do jednoho dne od přihlášení nepřijde e-mail s informacemi k zaplacení startovného, prosíme, kontaktujte nás na e-mailu <a href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.</span></li>
+        <li><i class="bi bi-hash"></i><span>Číslo na začátku řádku <b>není</b> startovní číslo.</span></li>
+      </ul>
+    </div>
 
+    <% if @entrants.empty? %>
+      <p class="text-muted">Zatím není přihlášen žádný závodník.</p>
+    <% else %>
+      <div class="bdv-table-wrap">
+        <div class="table-responsive">
+          <table class="table table-brand table-striped table-hover align-middle mb-0">
+            <thead>
+              <tr>
+                <th class="w-cat">#</th>
+                <th>Jméno</th>
+                <th>Příjmení</th>
+                <th>Oddíl</th>
+                <th class="text-center">Rok</th>
+                <th class="text-center">Horolezec</th>
+                <th class="text-center">Zaplaceno</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @entrants.each_with_index do |entrant, index| %>
+                <tr>
+                  <td class="text-muted"><%= index + 1 %></td>
+                  <td><%= entrant.first_name %></td>
+                  <td class="fw-semibold"><%= entrant.surname %></td>
+                  <td><%= entrant.club %></td>
+                  <td class="text-center"><%= entrant.year %></td>
+                  <td class="text-center"><%= entrant.climber ? 'ANO' : 'NE' %></td>
+                  <td class="text-center">
+                    <% if entrant.paid %>
+                      <span class="badge badge-brand">ANO</span>
+                    <% else %>
+                      <span class="badge badge-muted">NE</span>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <% end %>
   </div>
-</div>
-<!-- Content End -->
+</section>

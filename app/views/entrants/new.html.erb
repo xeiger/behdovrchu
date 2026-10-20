@@ -1,149 +1,85 @@
-<%= render :partial => 'partials/titlebar', locals: {title: 'Přihláška'} %>
+<% content_for :page_title, 'Přihláška' %>
 
-<!-- Content -->
-<div id="content">
+<section class="py-5">
   <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
 
-    <!-- Hlavni zavod -->
-    <div class="row">
-      <div class="col-md-12">
-        
-        <%#= render 'partials/covid' %>
+        <% case RACE[:registration]
+           when :closed, :finished %>
+          <div class="bdv-note">
+            <p><i class="bi bi-info-circle me-2"></i>Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, určitě přijďte, přihlásit se můžete v den závodu při prezenci.</p>
+          </div>
 
-        <h2>Přihláška</h2>
-
-        <% if false #Entrant.where(archived: false).count >= 299 %>
-
-          <ul class="list-a">
-            <li>
-              Zastavili jsme on-line přihlašování. Pokud máte zájem se závodu zúčastnit, určitě přijďte, přihlásit se můžete v den závodu při prezenci.
-            </li>
-          </ul>
-
-        <% elsif false %>
-
-          <ul class="list-a">
-            <li>
-              V brzké době spustíme registraci do závodu.
-            </li>
-          </ul>
+        <% when :soon %>
+          <div class="bdv-note">
+            <p><i class="bi bi-info-circle me-2"></i>V brzké době spustíme registraci do závodu. Sledujte náš <%= link_to 'facebook – BehDoVrchu', 'https://www.facebook.com/BehDoVrchu/', target: '_blank', rel: 'noopener' %>.</p>
+          </div>
 
         <% else %>
+          <div class="bdv-note mb-4">
+            <ul class="bdv-list mb-0">
+              <li><i class="bi bi-envelope"></i><span>V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na e-mailu <a href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.</span></li>
+              <li><i class="bi bi-envelope"></i><span>V případě, že Vám do jednoho dne od přihlášení nepřijde e-mail s informacemi k zaplacení startovného, prosíme, kontaktujte nás na e-mailu <a href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.</span></li>
+            </ul>
+          </div>
 
-          <ul class="list-a">
-            <li>
-              V případě hromadného přihlášení nebo nějakého problému s přihlášením nás kontaktujte na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
-            </li>
-            <li>
-              V případě, že Vám do jednoho dne od přihlášení nepřijde e-mail s informacemi k zaplacení startovného, prosíme, kontaktujte nás na e-mailu <a class="more" href="mailto:behdovrchu@email.cz">behdovrchu@email.cz</a>.
-            </li>
-          </ul>
-          <div class="space20"></div> 
+          <%= render 'partials/errors', object: @entrant %>
 
-          <%= render :partial => "partials/errors", :locals => {:object => @entrant} %>
-
-          <%= form_for @entrant, :html=>{:class=>'form form-comment'} do |f| %>
-
-            <div class="row">
+          <%= form_for @entrant, html: { class: 'bdv-form', novalidate: true } do |f| %>
+            <div class="row g-3">
               <div class="col-md-6">
-                <div class="form-group">
-                  <label>Jméno *</label>
-                  <%= f.text_field :first_name, class: "form-control" %>
+                <%= f.label :first_name, 'Jméno *', class: 'form-label' %>
+                <%= f.text_field :first_name, class: 'form-control', autocomplete: 'given-name' %>
+              </div>
+              <div class="col-md-6">
+                <%= f.label :surname, 'Příjmení *', class: 'form-label' %>
+                <%= f.text_field :surname, class: 'form-control', autocomplete: 'family-name' %>
+              </div>
+              <div class="col-md-6">
+                <%= f.label :email, 'E-mail *', class: 'form-label' %>
+                <%= f.email_field :email, class: 'form-control', autocomplete: 'email' %>
+              </div>
+              <div class="col-md-6">
+                <%= f.label :year, 'Rok narození *', class: 'form-label' %>
+                <%= f.text_field :year, class: 'form-control', inputmode: 'numeric', placeholder: 'např. 1990' %>
+              </div>
+              <div class="col-md-6">
+                <span class="form-label d-block">Muž / Žena *</span>
+                <div class="btn-group" role="group" aria-label="Muž / Žena">
+                  <%= f.radio_button :male, '1', class: 'btn-check', checked: @entrant.male %>
+                  <%= f.label :male, 'Muž', value: '1', class: 'btn btn-outline-brand px-4' %>
+                  <%= f.radio_button :male, '0', class: 'btn-check', checked: !@entrant.male %>
+                  <%= f.label :male, 'Žena', value: '0', class: 'btn btn-outline-brand px-4' %>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-group">
-                  <label>Příjmení *</label>
-                  <%= f.text_field :surname, class: "form-control" %>
+                <span class="form-label d-block">Jste členem horolezeckého oddílu? *</span>
+                <div class="btn-group" role="group" aria-label="Člen horolezeckého oddílu">
+                  <%= f.radio_button :climber, '1', class: 'btn-check', checked: @entrant.climber %>
+                  <%= f.label :climber, 'Ano', value: '1', class: 'btn btn-outline-brand px-4' %>
+                  <%= f.radio_button :climber, '0', class: 'btn-check', checked: !@entrant.climber %>
+                  <%= f.label :climber, 'Ne', value: '0', class: 'btn btn-outline-brand px-4' %>
                 </div>
+              </div>
+              <div class="col-md-6">
+                <%= f.label :club, 'Oddíl', class: 'form-label' %>
+                <%= f.text_field :club, class: 'form-control' %>
+              </div>
+              <div class="col-md-6">
+                <%= f.label :address, 'Adresa', class: 'form-label' %>
+                <%= f.text_field :address, class: 'form-control', autocomplete: 'street-address' %>
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Email *</label>
-                  <%= f.text_field :email, class: "form-control" %>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Rok narození *</label>
-                  <%= f.text_field :year, class: "form-control" %>
-                </div>
-              </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3 mt-4 pt-3 border-top">
+              <span class="text-muted small">Pole označená hvězdičkou (*) jsou povinná.</span>
+              <%= button_tag type: 'submit', class: 'btn btn-brand btn-lg px-5' do %>Přihlásit<% end %>
             </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Muž / Žena *</label>
-                  <div style="margin-top: 10px">
-                    <div class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.male %>">
-                        <%= f.radio_button :male, "1", checked: @entrant.male %> Muž
-                      </label>
-                      <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.male %>">
-                        <%= f.radio_button :male, "0", checked: !@entrant.male %> Žena
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Jste členem horolezeckého oddílu? *</label>
-                  <div style="margin-top: 10px">
-                    <div class="btn-group" data-toggle="buttons">
-                      <label class="btn btn-checkbox btn-info <%= 'active' if @entrant.climber %>">
-                        <%= f.radio_button :climber, "1", checked: @entrant.climber %> Ano
-                      </label>
-                      <label class="btn btn-checkbox btn-info <%= 'active' unless @entrant.climber %>">
-                        <%= f.radio_button :climber, "0", checked: !@entrant.climber %> Ne
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Oddíl</label>
-                  <%= f.text_field :club, class: "form-control" %>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label>Adresa</label>
-                  <%= f.text_field :address, class: "form-control" %>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="row">
-              <div class="col-md-4">
-                Pole označená hvězdičkou (*) jsou povinná!
-              </div>
-              <div class="col-md-8">
-                <%= button_tag( :class => "btn f-right") do %>
-                  Přihlásit
-                <% end %>
-              </div>
-            </div>
-
           <% end %>
+        <% end %>
 
-      <% end %>
       </div>
     </div>
-    <div class="space50"></div> 
-
   </div>
-</div>
-<!-- Content End -->
-<script>
-$("[name='my-checkbox']").bootstrapSwitch();
-</script>
+</section>
