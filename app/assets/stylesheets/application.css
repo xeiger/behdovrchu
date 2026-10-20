@@ -13,6 +13,7 @@
   --bdv-mint-pale: #eef7f7;
   --bdv-ink: #2b2b2b;
   --bdv-muted: #6b6b6b;
+  --bdv-nav-h: 96px;
   --bs-body-font-family: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bs-body-color: var(--bdv-ink);
   --bs-link-color-rgb: 100, 41, 109;
@@ -43,11 +44,12 @@ a:hover { text-decoration: underline; }
 .btn:hover { text-decoration: none; }
 
 /* Navigace */
-.bdv-navbar { background: #fff; border-bottom: 1px solid var(--bdv-mint-light); box-shadow: 0 2px 12px rgba(46, 18, 51, .06); padding-top: .5rem; padding-bottom: .5rem; }
+.bdv-navbar { background: #fff; border-bottom: 1px solid var(--bdv-mint-light); box-shadow: 0 2px 12px rgba(46, 18, 51, .06); padding-top: .5rem; padding-bottom: .5rem; min-height: var(--bdv-nav-h); }
 .bdv-navbar .navbar-brand:hover { text-decoration: none; }
-.bdv-brand-logo { height: 56px; width: auto; }
-.bdv-brand-text { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.35rem; line-height: 1; color: var(--bdv-purple); margin-left: .75rem; text-transform: uppercase; }
-.bdv-brand-text small { display: block; font-size: .7rem; letter-spacing: .12em; color: var(--bdv-muted); margin-top: .25rem; }
+.bdv-brand-logo { height: 80px; width: auto; }
+@media (max-width: 991.98px) { :root { --bdv-nav-h: 80px; } .bdv-brand-logo { height: 64px; } }
+.bdv-brand-text { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.6rem; line-height: 1; color: var(--bdv-purple); margin-left: .75rem; text-transform: uppercase; }
+.bdv-brand-text small { display: block; font-size: .78rem; letter-spacing: .12em; color: var(--bdv-muted); margin-top: .25rem; }
 .bdv-navbar .nav-link { color: var(--bdv-ink); font-weight: 500; padding: .5rem .9rem; border-radius: .5rem; }
 .bdv-navbar .nav-link:hover { background: var(--bdv-mint-pale); color: var(--bdv-purple); text-decoration: none; }
 .bdv-navbar .nav-link.active { background: var(--bdv-mint-light); color: var(--bdv-purple); font-weight: 600; }
@@ -55,10 +57,10 @@ a:hover { text-decoration: underline; }
 .bdv-navbar .navbar-toggler:focus { box-shadow: 0 0 0 .2rem rgba(169, 217, 217, .6); }
 
 /* Hero na úvodní stránce */
-.bdv-hero { position: relative; height: 68vh; min-height: 480px; max-height: 760px; background: var(--bdv-purple-deep); overflow: hidden; }
+.bdv-hero { position: relative; height: 62vh; min-height: 460px; max-height: 720px; background: var(--bdv-purple-deep); overflow: hidden; }
 .bdv-hero-carousel, .bdv-hero-carousel .carousel-inner, .bdv-hero-carousel .carousel-item { height: 100%; }
 .bdv-hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.bdv-hero-overlay { position: absolute; inset: 0; z-index: 2; display: flex; align-items: flex-end; padding-bottom: 4.5rem; color: #fff;
+.bdv-hero-overlay { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; padding: 2rem 0 5rem; color: #fff;
   background: linear-gradient(180deg, rgba(46, 18, 51, .10) 0%, rgba(46, 18, 51, .45) 55%, rgba(46, 18, 51, .85) 100%); }
 .bdv-hero-kicker { display: inline-block; background: var(--bdv-mint); color: var(--bdv-purple-deep); font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .06em; padding: .35rem .8rem; border-radius: .4rem; margin-bottom: 1rem; }
 .bdv-hero-title { font-size: clamp(2.6rem, 7vw, 5rem); line-height: .95; color: #fff; text-transform: uppercase; margin-bottom: .75rem; text-shadow: 0 2px 16px rgba(0, 0, 0, .35); }
@@ -103,7 +105,7 @@ a:hover { text-decoration: underline; }
 .bdv-list { list-style: none; padding: 0; margin: 0; }
 .bdv-list li { display: flex; gap: .6rem; align-items: flex-start; margin-bottom: .5rem; }
 .bdv-list li i { color: var(--bdv-purple); font-size: 1.15rem; line-height: 1.5; }
-.bdv-anchor-nav { position: sticky; top: 80px; z-index: 5; background: rgba(255, 255, 255, .95); backdrop-filter: blur(6px); padding: .5rem 0; border-bottom: 1px solid var(--bdv-mint-light); }
+.bdv-anchor-nav { position: sticky; top: var(--bdv-nav-h); z-index: 5; background: rgba(255, 255, 255, .95); backdrop-filter: blur(6px); padding: .5rem 0; border-bottom: 1px solid var(--bdv-mint-light); }
 
 /* Tabulky */
 .bdv-table-wrap { border-radius: .75rem; overflow: hidden; border: 1px solid var(--bdv-mint-light); }

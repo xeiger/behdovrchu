@@ -11,12 +11,15 @@
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
+        <% registration_open = RACE[:registration] == :open %>
         <% nav_items.each do |label, path, active| %>
+          <%# kdyz bezi prihlasovani, je misto odkazu Prihlaska jen tlacitko na konci menu %>
+          <% next if registration_open && path == new_entrant_path %>
           <li class="nav-item"><%= link_to label, path, class: "nav-link#{' active' if active}" %></li>
         <% end %>
-        <% if RACE[:registration] == :open %>
+        <% if registration_open %>
           <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <%= link_to 'Přihlásit se', new_entrant_path, class: 'btn btn-brand btn-sm px-3' %>
+            <%= link_to 'Přihlásit se', new_entrant_path, class: 'btn btn-brand px-4' %>
           </li>
         <% end %>
       </ul>
