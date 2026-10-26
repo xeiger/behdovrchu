@@ -7,7 +7,7 @@ class Entrant < ActiveRecord::Base
   validates :year, numericality: {only_integer: true, greater_than_or_equal_to: 1900, less_than_or_equal_to: RACE[:year] - 13}
 
   before_validation :generate_vs, on: :create
-  after_create :send_email
+  after_create_commit :send_email
 
   def to_mail
     "#{self.to_s} <#{self.email}>"
@@ -53,7 +53,7 @@ EOF
 
   def send_email
     return if self.variable_symbol[0..3].eql?('0000')
-    EntrantMailer.registration(self).deliver
+    EntrantMailer.registration(self).deliver_later
   end
 
 end

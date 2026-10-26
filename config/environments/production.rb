@@ -70,9 +70,9 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
-  # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter = :resque
-  # config.active_job.queue_name_prefix = "behdovrchu_production"
+  # E-maily po přihlášení se posílají na pozadí (deliver_later) přímo v procesu
+  # webového dyna, bez samostatné fronty. Uživatel tak nečeká na SMTP.
+  config.active_job.queue_adapter = :async
 
   # Disable caching for Action Mailer templates even if Action Controller
   # caching is enabled.
